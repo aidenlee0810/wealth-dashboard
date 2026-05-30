@@ -1,0 +1,9 @@
+{
+  "_comment": "Plan §5 — Stage-2 scale-up policy. Start conservative; widen after 30 consecutive GHA successes with avg elapsed < 40min.",
+  "stage1_max_tickers": 600,
+  "stage2_max_tickers": 120,
+  "stage2_max_tickers_after_30d_success": 120,
+  "consecutive_success_threshold": 30,
+  "max_elapsed_seconds_for_scaleup": 2400,
+  "last_updated": "2026-05-30"
+}

@@ -1,0 +1,134 @@
+{
+  "version": "2026-05-28",
+  "description": "Theme baskets (Layer D). 15 investable themes reflecting current market leadership structure. Korean names are primary in UI. Maintained quarterly + extendable by Theme Discovery Engine (Phase 10).",
+  "schema": {
+    "name_en": "English theme name",
+    "name_ko": "Korean theme name (primary in UI)",
+    "description": "what this theme captures",
+    "sector_etfs": "associated SPDR sector ETF(s)",
+    "tickers": "full basket",
+    "leaders": "highest-conviction names used for theme leadership scoring"
+  },
+  "themes": {
+    "ai_infrastructure": {
+      "name_en": "AI Infrastructure",
+      "name_ko": "AI 인프라",
+      "description": "Compute, accelerators, and the hyperscalers building out AI capacity.",
+      "sector_etfs": ["XLK", "XLC"],
+      "tickers": ["NVDA", "MSFT", "GOOGL", "AMZN", "META", "AVGO", "ORCL", "AMD", "SMCI", "DELL", "ANET", "VRT", "CRWV", "TSM"],
+      "leaders": ["NVDA", "AVGO", "MSFT", "GOOGL"]
+    },
+    "semiconductors": {
+      "name_en": "Semiconductors",
+      "name_ko": "반도체",
+      "description": "Chip designers, foundries, and semiconductor capital equipment.",
+      "sector_etfs": ["XLK"],
+      "tickers": ["NVDA", "AVGO", "AMD", "TSM", "ASML", "AMAT", "LRCX", "KLAC", "MU", "QCOM", "TXN", "ARM", "MRVL", "ADI", "NXPI"],
+      "leaders": ["NVDA", "AVGO", "TSM", "ASML"]
+    },
+    "cybersecurity": {
+      "name_en": "Cybersecurity",
+      "name_ko": "사이버보안",
+      "description": "Endpoint, network, cloud, and identity security platforms.",
+      "sector_etfs": ["XLK"],
+      "tickers": ["CRWD", "PANW", "ZS", "FTNT", "NET", "S", "OKTA", "CYBR", "QLYS", "TENB", "RBRK"],
+      "leaders": ["CRWD", "PANW", "ZS"]
+    },
+    "cloud_software": {
+      "name_en": "Cloud & Enterprise Software",
+      "name_ko": "클라우드/SaaS",
+      "description": "SaaS, data platforms, and enterprise software with recurring revenue.",
+      "sector_etfs": ["XLK"],
+      "tickers": ["MSFT", "ORCL", "NOW", "CRM", "SNOW", "DDOG", "MDB", "TEAM", "WDAY", "ADBE", "INTU", "PLTR", "HUBS", "NET"],
+      "leaders": ["MSFT", "NOW", "PLTR", "CRM"]
+    },
+    "glp1_obesity": {
+      "name_en": "GLP-1 / Obesity / Metabolic",
+      "name_ko": "비만/대사 (GLP-1)",
+      "description": "GLP-1 incretin franchises and metabolic-disease pipelines.",
+      "sector_etfs": ["XLV"],
+      "tickers": ["LLY", "NVO", "AMGN", "VKTX", "ZBH", "PFE", "RHHBY"],
+      "leaders": ["LLY", "NVO"]
+    },
+    "biopharma_genomics": {
+      "name_en": "Biopharma & Genomics",
+      "name_ko": "바이오파마/유전체",
+      "description": "Large-cap biopharma and genomic-medicine platforms.",
+      "sector_etfs": ["XLV"],
+      "tickers": ["LLY", "NVO", "REGN", "VRTX", "AMGN", "ABBV", "GILD", "BIIB", "MRNA", "ALNY", "BMY", "ISRG"],
+      "leaders": ["LLY", "VRTX", "REGN"]
+    },
+    "medical_devices": {
+      "name_en": "Medical Devices & MedTech",
+      "name_ko": "의료기기",
+      "description": "Surgical robotics, cardiology, diabetes, and diagnostics hardware.",
+      "sector_etfs": ["XLV"],
+      "tickers": ["ISRG", "SYK", "MDT", "BSX", "EW", "DXCM", "ABT", "PODD", "GEHC"],
+      "leaders": ["ISRG", "BSX", "SYK"]
+    },
+    "nuclear_power": {
+      "name_en": "Nuclear & Power Infrastructure",
+      "name_ko": "원전/전력 인프라",
+      "description": "Independent power producers and nuclear capacity tied to AI datacenter demand.",
+      "sector_etfs": ["XLU", "XLI"],
+      "tickers": ["CEG", "VST", "NRG", "TLN", "GEV", "ETN", "NEE", "SO", "PWR", "OKLO", "SMR"],
+      "leaders": ["CEG", "VST", "GEV"]
+    },
+    "electrification_grid": {
+      "name_en": "Electrification & Grid",
+      "name_ko": "전기화/전력망",
+      "description": "Grid equipment, electrical components, and energy storage enablers.",
+      "sector_etfs": ["XLI", "XLB"],
+      "tickers": ["ETN", "GEV", "PWR", "HUBB", "NVT", "ENPH", "FSLR", "AMP", "PH", "EMR"],
+      "leaders": ["ETN", "GEV", "PWR"]
+    },
+    "defense_aerospace": {
+      "name_en": "Defense & Aerospace",
+      "name_ko": "방산/항공우주",
+      "description": "Primes, defense electronics, and commercial aerospace.",
+      "sector_etfs": ["XLI"],
+      "tickers": ["LMT", "RTX", "NOC", "GD", "BA", "LHX", "HWM", "AXON", "PLTR", "KTOS", "LDOS"],
+      "leaders": ["RTX", "AXON", "GD"]
+    },
+    "fintech_payments": {
+      "name_en": "Fintech & Digital Payments",
+      "name_ko": "핀테크/디지털결제",
+      "description": "Payment networks, neobanks, and digital-finance platforms.",
+      "sector_etfs": ["XLF", "XLK"],
+      "tickers": ["V", "MA", "AXP", "PYPL", "SQ", "SOFI", "NU", "FI", "FIS", "GPN", "AFRM", "TOST"],
+      "leaders": ["V", "MA", "SOFI"]
+    },
+    "crypto_digital_assets": {
+      "name_en": "Crypto & Digital Assets",
+      "name_ko": "크립토/디지털자산",
+      "description": "Exchanges, miners, and crypto-levered balance sheets.",
+      "sector_etfs": ["XLF", "XLK"],
+      "tickers": ["COIN", "MSTR", "MARA", "RIOT", "HOOD", "CLSK", "BITF"],
+      "leaders": ["COIN", "MSTR", "HOOD"]
+    },
+    "robotics_automation": {
+      "name_en": "Robotics & Automation",
+      "name_ko": "로봇/자동화",
+      "description": "Industrial automation, surgical/warehouse robotics, machine vision.",
+      "sector_etfs": ["XLI", "XLK"],
+      "tickers": ["ISRG", "ABB", "ROK", "EMR", "TER", "ZBRA", "PTC", "NVDA", "TSLA"],
+      "leaders": ["ISRG", "ROK", "NVDA"]
+    },
+    "ecommerce_internet": {
+      "name_en": "E-commerce & Consumer Internet",
+      "name_ko": "이커머스/소비자인터넷",
+      "description": "Marketplaces, on-demand platforms, and global consumer internet.",
+      "sector_etfs": ["XLY", "XLC"],
+      "tickers": ["AMZN", "MELI", "SHOP", "SE", "UBER", "ABNB", "DASH", "BKNG", "PDD", "CPNG"],
+      "leaders": ["AMZN", "MELI", "UBER"]
+    },
+    "media_streaming": {
+      "name_en": "Media & Streaming",
+      "name_ko": "미디어/스트리밍",
+      "description": "Streaming, advertising platforms, and digital media.",
+      "sector_etfs": ["XLC"],
+      "tickers": ["NFLX", "GOOGL", "META", "DIS", "SPOT", "TTD", "RBLX", "WBD"],
+      "leaders": ["NFLX", "META", "SPOT"]
+    }
+  }
+}

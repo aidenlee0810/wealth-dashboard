@@ -1,0 +1,25 @@
+{
+  "scenario_id": "gold_006_signal_id_determinism",
+  "description": "_signal_id is a deterministic sha1-based id — same inputs always give same output",
+  "function": "signal_generator._signal_id",
+  "test_cases": [
+    {
+      "date": "2026-05-15",
+      "ticker": "NVDA",
+      "source": "snapshot",
+      "expected": "sig_46859721bcb8"
+    },
+    {
+      "date": "2026-05-15",
+      "ticker": "AAPL",
+      "source": "snapshot",
+      "expected": "sig_b92769bd8850"
+    },
+    {
+      "date": "2026-05-16",
+      "ticker": "NVDA",
+      "source": "snapshot",
+      "expected": "sig_1a855bea38aa"
+    }
+  ]
+}

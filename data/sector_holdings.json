@@ -1,0 +1,72 @@
+{
+  "version": "2026-05-28",
+  "description": "Sector holdings (Layer C). 11 SPDR sector ETFs with their top-weighted holdings. Korean sector names are primary in UI. Refresh quarterly.",
+  "sectors": {
+    "XLK": {
+      "name_en": "Technology",
+      "name_ko": "기술",
+      "model_type": "operating_company",
+      "holdings": ["NVDA", "MSFT", "AAPL", "AVGO", "ORCL", "PLTR", "CRM", "CSCO", "AMD", "ACN"]
+    },
+    "XLV": {
+      "name_en": "Health Care",
+      "name_ko": "헬스케어",
+      "model_type": "operating_company",
+      "holdings": ["LLY", "JNJ", "ABBV", "UNH", "MRK", "ABT", "TMO", "ISRG", "AMGN", "BSX"]
+    },
+    "XLF": {
+      "name_en": "Financials",
+      "name_ko": "금융",
+      "model_type": "bank",
+      "holdings": ["BRK.B", "JPM", "V", "MA", "BAC", "WFC", "GS", "AXP", "MS", "SPGI"]
+    },
+    "XLY": {
+      "name_en": "Consumer Discretionary",
+      "name_ko": "임의소비재",
+      "model_type": "operating_company",
+      "holdings": ["AMZN", "TSLA", "HD", "MCD", "BKNG", "LOW", "TJX", "NKE", "SBUX", "ORLY"]
+    },
+    "XLC": {
+      "name_en": "Communication Services",
+      "name_ko": "커뮤니케이션",
+      "model_type": "operating_company",
+      "holdings": ["META", "GOOGL", "GOOG", "NFLX", "DIS", "T", "VZ", "TMUS", "CMCSA", "EA"]
+    },
+    "XLI": {
+      "name_en": "Industrials",
+      "name_ko": "산업재",
+      "model_type": "operating_company",
+      "holdings": ["GE", "CAT", "RTX", "UNP", "BA", "HON", "ETN", "DE", "LMT", "UPS"]
+    },
+    "XLP": {
+      "name_en": "Consumer Staples",
+      "name_ko": "필수소비재",
+      "model_type": "operating_company",
+      "holdings": ["COST", "WMT", "PG", "KO", "PEP", "PM", "MO", "MDLZ", "CL", "TGT"]
+    },
+    "XLE": {
+      "name_en": "Energy",
+      "name_ko": "에너지",
+      "model_type": "operating_company",
+      "holdings": ["XOM", "CVX", "COP", "WMB", "EOG", "KMI", "SLB", "OKE", "PSX", "MPC"]
+    },
+    "XLU": {
+      "name_en": "Utilities",
+      "name_ko": "유틸리티",
+      "model_type": "operating_company",
+      "holdings": ["NEE", "SO", "DUK", "CEG", "VST", "AEP", "D", "EXC", "SRE", "XEL"]
+    },
+    "XLRE": {
+      "name_en": "Real Estate",
+      "name_ko": "부동산",
+      "model_type": "reit",
+      "holdings": ["PLD", "AMT", "EQIX", "WELL", "SPG", "PSA", "O", "DLR", "CCI", "CBRE"]
+    },
+    "XLB": {
+      "name_en": "Materials",
+      "name_ko": "소재",
+      "model_type": "operating_company",
+      "holdings": ["LIN", "SHW", "ECL", "FCX", "APD", "NEM", "CTVA", "DOW", "NUE", "DD"]
+    }
+  }
+}

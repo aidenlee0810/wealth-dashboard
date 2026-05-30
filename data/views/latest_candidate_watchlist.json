@@ -1,0 +1,1947 @@
+{
+  "snapshot_date": "2026-05-29",
+  "market_date": "2026-05-29",
+  "executed_at_utc": "2026-05-30T18:18:34.042680+00:00",
+  "feature_version": "4.5.0",
+  "universe_version": "2.0.0",
+  "generated_at_utc": "2026-05-30T18:24:50.019257+00:00",
+  "count": 50,
+  "candidates": [
+    {
+      "ticker": "VRTX",
+      "type": "Watchlist",
+      "score": 61.5,
+      "sector": "Health Care",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "biopharma_genomics"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:biopharma_genomics",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 66/100 · 상태 UPTREND",
+        "테마 소속: biopharma_genomics",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 66/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 99.3,
+        "valuation": 43.0,
+        "growth": 37.9,
+        "technical": 66.3,
+        "sector_theme": 36.3,
+        "macro": 30.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "PLD",
+      "type": "Watchlist",
+      "score": 61.4,
+      "sector": "Real Estate",
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLRE"
+      ],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 94/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 94/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": 50.0,
+        "technical": 93.8,
+        "sector_theme": 30.5,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "reit"
+    },
+    {
+      "ticker": "EQIX",
+      "type": "Watchlist",
+      "score": 61.0,
+      "sector": "Real Estate",
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLRE"
+      ],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 92/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 92/100 · 상태 BASE",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": 50.0,
+        "technical": 92.5,
+        "sector_theme": 30.5,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "reit"
+    },
+    {
+      "ticker": "LLY",
+      "type": "Watchlist",
+      "score": 60.9,
+      "sector": "Health Care",
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "glp1_obesity",
+        "biopharma_genomics"
+      ],
+      "source_buckets": [
+        "sp500",
+        "sector:XLV",
+        "theme:glp1_obesity",
+        "theme:biopharma_genomics"
+      ],
+      "bq_coverage_ratio": 28.6,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (29%)",
+      "reasons": [
+        "기술 점수 94/100 · 상태 UPTREND",
+        "테마 소속: glp1_obesity, biopharma_genomics",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 94/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": 6.7,
+        "growth": 100.0,
+        "technical": 93.5,
+        "sector_theme": 45.0,
+        "macro": 30.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "GS",
+      "type": "Watchlist",
+      "score": 60.8,
+      "sector": "Financials",
+      "dq": 92.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLF"
+      ],
+      "bq_coverage_ratio": 40.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (40%)",
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 73.5,
+        "valuation": 0.0,
+        "growth": 50.0,
+        "technical": 100.0,
+        "sector_theme": 52.1,
+        "macro": 60.0,
+        "risk": 90.0
+      },
+      "model_type": "bank"
+    },
+    {
+      "ticker": "PSX",
+      "type": "Watchlist",
+      "score": 60.7,
+      "sector": "Energy",
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLE"
+      ],
+      "bq_coverage_ratio": 14.3,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (14%)",
+      "reasons": [
+        "기술 점수 89/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 89/100 · 상태 BASE",
+      "pillars": {
+        "bq": null,
+        "valuation": 88.9,
+        "growth": 5.4,
+        "technical": 88.9,
+        "sector_theme": 35.8,
+        "macro": 60.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "APA",
+      "type": "Watchlist",
+      "score": 60.6,
+      "sector": "Energy",
+      "dq": 92.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500"
+      ],
+      "bq_coverage_ratio": 57.1,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (57%)",
+      "reasons": [
+        "기술 점수 63/100 · 상태 PULLBACK",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 63/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 78.2,
+        "valuation": 98.3,
+        "growth": 0.0,
+        "technical": 62.9,
+        "sector_theme": 35.8,
+        "macro": 60.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "DXCM",
+      "type": "Watchlist",
+      "score": 60.6,
+      "sector": "Health Care",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "medical_devices"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:medical_devices",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 67/100 · 상태 UPTREND",
+        "테마 소속: medical_devices",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 67/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 93.7,
+        "valuation": 55.8,
+        "growth": 54.1,
+        "technical": 66.7,
+        "sector_theme": 19.9,
+        "macro": 22.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "SPG",
+      "type": "Watchlist",
+      "score": 60.1,
+      "sector": "Real Estate",
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLRE"
+      ],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 89/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 89/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": 50.0,
+        "technical": 89.3,
+        "sector_theme": 30.5,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "reit"
+    },
+    {
+      "ticker": "MNST",
+      "type": "Watchlist",
+      "score": 60.1,
+      "sector": "Consumer Staples",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 96/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 96/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 87.7,
+        "valuation": 9.3,
+        "growth": 57.2,
+        "technical": 96.0,
+        "sector_theme": 23.9,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "CPT",
+      "type": "Watchlist",
+      "score": 59.8,
+      "sector": "Real Estate",
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500"
+      ],
+      "bq_coverage_ratio": 14.3,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (14%)",
+      "reasons": [
+        "기술 점수 70/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 70/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": 42.0,
+        "growth": 100.0,
+        "technical": 69.9,
+        "sector_theme": 30.5,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "PSA",
+      "type": "Watchlist",
+      "score": 59.3,
+      "sector": "Real Estate",
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLRE"
+      ],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 87/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 87/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": 50.0,
+        "technical": 86.6,
+        "sector_theme": 30.5,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "reit"
+    },
+    {
+      "ticker": "OKE",
+      "type": "Watchlist",
+      "score": 59.2,
+      "sector": "Energy",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLE"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 57/100 · 상태 PULLBACK",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 57/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 33.0,
+        "valuation": 76.7,
+        "growth": 100.0,
+        "technical": 57.1,
+        "sector_theme": 35.8,
+        "macro": 60.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "FCX",
+      "type": "Watchlist",
+      "score": 59.2,
+      "sector": "Materials",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLB"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 85/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 85/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 76.2,
+        "valuation": 41.4,
+        "growth": 25.8,
+        "technical": 84.9,
+        "sector_theme": 36.6,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "KO",
+      "type": "Watchlist",
+      "score": 58.8,
+      "sector": "Consumer Staples",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLP"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 88/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 88/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 79.3,
+        "valuation": 49.3,
+        "growth": 24.3,
+        "technical": 87.8,
+        "sector_theme": 23.9,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "AXP",
+      "type": "Watchlist",
+      "score": 58.2,
+      "sector": "Financials",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "fintech_payments"
+      ],
+      "source_buckets": [
+        "sp500",
+        "sector:XLF",
+        "theme:fintech_payments"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 55/100 · 상태 NEUTRAL",
+        "테마 소속: fintech_payments",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 55/100 · 상태 NEUTRAL",
+      "pillars": {
+        "bq": 53.3,
+        "valuation": 78.9,
+        "growth": 31.5,
+        "technical": 54.9,
+        "sector_theme": 49.9,
+        "macro": 60.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "FOX",
+      "type": "Watchlist",
+      "score": 58.2,
+      "sector": "Communication Services",
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500"
+      ],
+      "bq_coverage_ratio": 28.6,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (29%)",
+      "reasons": [
+        "기술 점수 84/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 84/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": 95.9,
+        "growth": 11.1,
+        "technical": 84.1,
+        "sector_theme": 24.2,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "D",
+      "type": "Watchlist",
+      "score": 58.1,
+      "sector": "Utilities",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLU"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 92/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 92/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 39.7,
+        "valuation": 82.4,
+        "growth": 62.6,
+        "technical": 92.3,
+        "sector_theme": 14.4,
+        "macro": 40.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "CSX",
+      "type": "Watchlist",
+      "score": 58.0,
+      "sector": "Industrials",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 91/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 91/100 · 상태 BASE",
+      "pillars": {
+        "bq": 70.5,
+        "valuation": 30.8,
+        "growth": 6.7,
+        "technical": 90.8,
+        "sector_theme": 51.3,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "GILD",
+      "type": "Watchlist",
+      "score": 57.7,
+      "sector": "Health Care",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "biopharma_genomics"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:biopharma_genomics"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 51/100 · 상태 PULLBACK",
+        "테마 소속: biopharma_genomics",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 51/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 81.3,
+        "valuation": 76.5,
+        "growth": 20.2,
+        "technical": 50.8,
+        "sector_theme": 36.3,
+        "macro": 30.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "FOXA",
+      "type": "Watchlist",
+      "score": 57.6,
+      "sector": "Communication Services",
+      "dq": 80.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500"
+      ],
+      "bq_coverage_ratio": 28.6,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (29%)",
+      "reasons": [
+        "기술 점수 85/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 85/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": 91.9,
+        "growth": 11.1,
+        "technical": 84.8,
+        "sector_theme": 24.2,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "BIIB",
+      "type": "Watchlist",
+      "score": 57.4,
+      "sector": "Health Care",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "biopharma_genomics"
+      ],
+      "source_buckets": [
+        "sp500",
+        "theme:biopharma_genomics"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 89/100 · 상태 UPTREND",
+        "테마 소속: biopharma_genomics",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 89/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 43.6,
+        "valuation": 89.0,
+        "growth": 14.2,
+        "technical": 88.9,
+        "sector_theme": 36.3,
+        "macro": 30.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ODFL",
+      "type": "Watchlist",
+      "score": 57.3,
+      "sector": "Industrials",
+      "dq": 92.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100"
+      ],
+      "bq_coverage_ratio": 57.1,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (57%)",
+      "reasons": [
+        "기술 점수 90/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 90/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 89.3,
+        "valuation": 9.5,
+        "growth": 0.0,
+        "technical": 90.2,
+        "sector_theme": 51.3,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "BKR",
+      "type": "Watchlist",
+      "score": 57.2,
+      "sector": "Energy",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 63/100 · 상태 PULLBACK",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 63/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 65.3,
+        "valuation": 78.9,
+        "growth": 12.3,
+        "technical": 62.9,
+        "sector_theme": 35.8,
+        "macro": 60.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "CL",
+      "type": "Watchlist",
+      "score": 57.0,
+      "sector": "Consumer Staples",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLP"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 81/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 81/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 74.2,
+        "valuation": 55.0,
+        "growth": 22.1,
+        "technical": 80.6,
+        "sector_theme": 23.9,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ROST",
+      "type": "Watchlist",
+      "score": 56.9,
+      "sector": "Consumer Discretionary",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 98/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 98/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 76.5,
+        "valuation": 31.2,
+        "growth": 32.6,
+        "technical": 97.7,
+        "sector_theme": 17.1,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "CAT",
+      "type": "Watchlist",
+      "score": 56.7,
+      "sector": "Industrials",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLI"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 98/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 98/100 · 상태 BASE",
+      "pillars": {
+        "bq": 51.9,
+        "valuation": 11.5,
+        "growth": 43.2,
+        "technical": 97.8,
+        "sector_theme": 51.3,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ABNB",
+      "type": "Watchlist",
+      "score": 56.5,
+      "sector": "Consumer Discretionary",
+      "dq": 92.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "ecommerce_internet"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:ecommerce_internet",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 57.1,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (57%)",
+      "reasons": [
+        "기술 점수 59/100 · 상태 PULLBACK",
+        "테마 소속: ecommerce_internet",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 59/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 80.3,
+        "valuation": 57.7,
+        "growth": 47.5,
+        "technical": 58.8,
+        "sector_theme": 21.0,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "NU",
+      "type": "Watchlist",
+      "score": 56.3,
+      "sector": "Financials",
+      "dq": 92.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "fintech_payments"
+      ],
+      "source_buckets": [
+        "theme:fintech_payments",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 57.1,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (57%)",
+      "reasons": [
+        "기술 점수 18/100 · 상태 NEUTRAL",
+        "테마 소속: fintech_payments",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 18/100 · 상태 NEUTRAL",
+      "pillars": {
+        "bq": 37.7,
+        "valuation": 83.5,
+        "growth": 100.0,
+        "technical": 18.5,
+        "sector_theme": 49.9,
+        "macro": 60.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "AVB",
+      "type": "Watchlist",
+      "score": 56.2,
+      "sector": "Real Estate",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 71/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 71/100 · 상태 BASE",
+      "pillars": {
+        "bq": 66.0,
+        "valuation": 68.9,
+        "growth": 16.2,
+        "technical": 71.0,
+        "sector_theme": 30.5,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "BBY",
+      "type": "Watchlist",
+      "score": 56.2,
+      "sector": "Consumer Discretionary",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 81/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 81/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 58.3,
+        "valuation": 90.9,
+        "growth": 10.6,
+        "technical": 80.9,
+        "sector_theme": 17.1,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "TJX",
+      "type": "Watchlist",
+      "score": 55.8,
+      "sector": "Consumer Discretionary",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLY"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 59/100 · 상태 PULLBACK",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 59/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 71.4,
+        "valuation": 72.2,
+        "growth": 39.6,
+        "technical": 59.0,
+        "sector_theme": 17.1,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "VZ",
+      "type": "Watchlist",
+      "score": 55.7,
+      "sector": "Communication Services",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLC"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 57/100 · 상태 PULLBACK",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 57/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 59.8,
+        "valuation": 98.7,
+        "growth": 17.3,
+        "technical": 57.1,
+        "sector_theme": 24.2,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "PFE",
+      "type": "Watchlist",
+      "score": 55.6,
+      "sector": "Health Care",
+      "dq": 80.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "glp1_obesity"
+      ],
+      "source_buckets": [
+        "sp500",
+        "theme:glp1_obesity"
+      ],
+      "bq_coverage_ratio": 28.6,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (29%)",
+      "reasons": [
+        "기술 점수 59/100 · 상태 PULLBACK",
+        "테마 소속: glp1_obesity",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 59/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": null,
+        "valuation": 84.5,
+        "growth": 14.6,
+        "technical": 59.1,
+        "sector_theme": 45.4,
+        "macro": 40.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "PWR",
+      "type": "Watchlist",
+      "score": 55.3,
+      "sector": "Industrials",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "nuclear_power",
+        "electrification_grid"
+      ],
+      "source_buckets": [
+        "sp500",
+        "theme:nuclear_power",
+        "theme:electrification_grid"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 99/100 · 상태 BASE",
+        "테마 소속: nuclear_power, electrification_grid",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 99/100 · 상태 BASE",
+      "pillars": {
+        "bq": 35.9,
+        "valuation": 12.2,
+        "growth": 69.5,
+        "technical": 98.7,
+        "sector_theme": 44.7,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "EW",
+      "type": "Watchlist",
+      "score": 55.1,
+      "sector": "Health Care",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "medical_devices"
+      ],
+      "source_buckets": [
+        "sp500",
+        "theme:medical_devices",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 90/100 · 상태 UPTREND",
+        "테마 소속: medical_devices",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 90/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 73.2,
+        "valuation": 14.0,
+        "growth": 64.3,
+        "technical": 89.6,
+        "sector_theme": 19.9,
+        "macro": 22.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "TGT",
+      "type": "Watchlist",
+      "score": 55.0,
+      "sector": "Consumer Staples",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLP"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 90/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 90/100 · 상태 BASE",
+      "pillars": {
+        "bq": 44.0,
+        "valuation": 81.9,
+        "growth": 12.5,
+        "technical": 90.5,
+        "sector_theme": 23.9,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ABBV",
+      "type": "Watchlist",
+      "score": 54.9,
+      "sector": "Health Care",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "biopharma_genomics"
+      ],
+      "source_buckets": [
+        "sp500",
+        "sector:XLV",
+        "theme:biopharma_genomics",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 54/100 · 상태 NEUTRAL",
+        "테마 소속: biopharma_genomics",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 54/100 · 상태 NEUTRAL",
+      "pillars": {
+        "bq": 77.2,
+        "valuation": 47.4,
+        "growth": 36.3,
+        "technical": 54.0,
+        "sector_theme": 36.3,
+        "macro": 30.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "SLB",
+      "type": "Watchlist",
+      "score": 54.6,
+      "sector": "Energy",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLE"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 94/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 94/100 · 상태 BASE",
+      "pillars": {
+        "bq": 31.6,
+        "valuation": 75.9,
+        "growth": 10.8,
+        "technical": 93.5,
+        "sector_theme": 35.8,
+        "macro": 60.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "GEV",
+      "type": "Watchlist",
+      "score": 54.1,
+      "sector": "Industrials",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "nuclear_power",
+        "electrification_grid"
+      ],
+      "source_buckets": [
+        "sp500",
+        "theme:nuclear_power",
+        "theme:electrification_grid",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 63/100 · 상태 PULLBACK",
+        "테마 소속: nuclear_power, electrification_grid",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 63/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 62.6,
+        "valuation": 32.2,
+        "growth": 38.7,
+        "technical": 63.2,
+        "sector_theme": 44.7,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "AMGN",
+      "type": "Watchlist",
+      "score": 53.1,
+      "sector": "Health Care",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "glp1_obesity",
+        "biopharma_genomics"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLV",
+        "theme:glp1_obesity",
+        "theme:biopharma_genomics",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 50/100 · 상태 PULLBACK",
+        "테마 소속: glp1_obesity, biopharma_genomics",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 50/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 56.2,
+        "valuation": 60.4,
+        "growth": 35.2,
+        "technical": 50.0,
+        "sector_theme": 45.0,
+        "macro": 30.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "FER",
+      "type": "Watchlist",
+      "score": 52.9,
+      "sector": "Military, Government, Technical",
+      "dq": 92.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "nasdaq100"
+      ],
+      "bq_coverage_ratio": 57.1,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (57%)",
+      "reasons": [
+        "기술 점수 83/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 83/100 · 상태 BASE",
+      "pillars": {
+        "bq": 41.1,
+        "valuation": 41.5,
+        "growth": 25.6,
+        "technical": 82.8,
+        "sector_theme": 50.0,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "EA",
+      "type": "Watchlist",
+      "score": 52.7,
+      "sector": "Communication Services",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLC"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 65/100 · 상태 PULLBACK",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 65/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 79.3,
+        "valuation": 44.9,
+        "growth": 12.0,
+        "technical": 65.0,
+        "sector_theme": 24.2,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "NEE",
+      "type": "Watchlist",
+      "score": 52.3,
+      "sector": "Utilities",
+      "dq": 92.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "nuclear_power"
+      ],
+      "source_buckets": [
+        "sp500",
+        "sector:XLU",
+        "theme:nuclear_power",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 42.9,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (43%)",
+      "reasons": [
+        "기술 점수 54/100 · 상태 PULLBACK",
+        "테마 소속: nuclear_power",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 54/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 58.1,
+        "valuation": 97.1,
+        "growth": 12.2,
+        "technical": 54.4,
+        "sector_theme": 22.5,
+        "macro": 40.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "MAR",
+      "type": "Watchlist",
+      "score": 52.2,
+      "sector": "Consumer Discretionary",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 95/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 95/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 64.6,
+        "valuation": 27.7,
+        "growth": 23.6,
+        "technical": 95.0,
+        "sector_theme": 17.1,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ETN",
+      "type": "Watchlist",
+      "score": 52.2,
+      "sector": "Industrials",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "nuclear_power",
+        "electrification_grid"
+      ],
+      "source_buckets": [
+        "sp500",
+        "sector:XLI",
+        "theme:nuclear_power",
+        "theme:electrification_grid",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 93/100 · 상태 BASE",
+        "테마 소속: nuclear_power, electrification_grid",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 93/100 · 상태 BASE",
+      "pillars": {
+        "bq": 35.1,
+        "valuation": 19.3,
+        "growth": 45.5,
+        "technical": 92.6,
+        "sector_theme": 44.7,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "HON",
+      "type": "Watchlist",
+      "score": 51.3,
+      "sector": "Industrials",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLI"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 68/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 68/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 54.6,
+        "valuation": 25.8,
+        "growth": 20.0,
+        "technical": 68.3,
+        "sector_theme": 51.3,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "MRK",
+      "type": "Watchlist",
+      "score": 51.3,
+      "sector": "Health Care",
+      "dq": 80.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLV"
+      ],
+      "bq_coverage_ratio": 28.6,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (29%)",
+      "reasons": [
+        "기술 점수 86/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 86/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": 58.3,
+        "growth": 18.7,
+        "technical": 85.8,
+        "sector_theme": 21.8,
+        "macro": 40.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "NUE",
+      "type": "Watchlist",
+      "score": 51.2,
+      "sector": "Materials",
+      "dq": 92.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLB"
+      ],
+      "bq_coverage_ratio": 42.9,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (43%)",
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 21.0,
+        "valuation": 41.3,
+        "growth": 45.0,
+        "technical": 100.0,
+        "sector_theme": 36.6,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "BMY",
+      "type": "Watchlist",
+      "score": 50.0,
+      "sector": "Health Care",
+      "dq": 100.0,
+      "target_weight": 0.012,
+      "risk_adjusted_weight": 0.012,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "biopharma_genomics"
+      ],
+      "source_buckets": [
+        "sp500",
+        "theme:biopharma_genomics"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 55/100 · 상태 PULLBACK",
+        "테마 소속: biopharma_genomics",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 55/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 35.9,
+        "valuation": 90.4,
+        "growth": 15.7,
+        "technical": 55.0,
+        "sector_theme": 36.3,
+        "macro": 30.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    }
+  ]
+}

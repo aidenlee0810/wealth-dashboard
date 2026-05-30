@@ -1,0 +1,25 @@
+# jobs/requirements.txt — dependencies for GitHub Actions snapshot jobs
+#
+# Design philosophy: the LOCAL server (server.py, db.py) is stdlib-only.
+# These deps are for the GHA snapshot pipeline (Phase 3+) only.
+#
+# Phase 2 status: scrape_indices.py and contracts/ are stdlib-only.
+# Nothing here is required to run Phase 1/2 locally.
+
+# --- Statistical / numerical ---
+# Phase 7 backtest engine (jobs/backtest/) is PURE STDLIB — statistics.NormalDist
+# for Φ/Φ⁻¹, manual skew/kurtosis, seeded random for bootstraps. No numpy/scipy.
+# These remain reserved for the §30 Fama-French factor model (heavier algebra):
+# numpy>=1.24
+# pandas>=2.0
+# scipy>=1.10
+# statsmodels>=0.14        # Fama-French factor regression (§30)
+
+# --- Data validation (§23) — OPTIONAL ---
+# The contracts framework (jobs/contracts/) is stdlib-only by default.
+# pydantic can be layered on for richer validation if desired:
+# pydantic>=2.0
+
+# Phase 2 requires NO external packages. This file is a forward-looking
+# manifest so `pip install -r jobs/requirements.txt` is a no-op today
+# and grows as later phases add real dependencies.

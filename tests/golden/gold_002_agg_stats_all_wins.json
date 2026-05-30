@@ -1,0 +1,22 @@
+{
+  "scenario_id": "gold_002_agg_stats_all_wins",
+  "description": "All wins → profit_factor=None (no losses), hit_rate=1.0",
+  "function": "views_builder._agg_stats",
+  "frozen_inputs": {
+    "rows": [
+      {"abs_ret": 0.10, "rel_spy": 0.06, "rel_qqq": 0.05, "mae": -0.01, "mfe": 0.12, "mdd": -0.01},
+      {"abs_ret": 0.05, "rel_spy": 0.03, "rel_qqq": 0.02, "mae": -0.00, "mfe": 0.07, "mdd": -0.00},
+      {"abs_ret": 0.03, "rel_spy": 0.01, "rel_qqq": 0.01, "mae": -0.01, "mfe": 0.04, "mdd": -0.01}
+    ]
+  },
+  "expected_outputs": {
+    "n": 3,
+    "hit_rate": 1.0,
+    "profit_factor": null,
+    "payoff_ratio": null,
+    "ev": 0.06
+  },
+  "tolerance": {
+    "ev": 0.0001
+  }
+}

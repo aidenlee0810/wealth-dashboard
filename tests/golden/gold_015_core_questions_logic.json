@@ -1,0 +1,25 @@
+{
+  "scenario_id": "gold_015_core_questions_logic",
+  "description": "Core question Q5 (overall 20D positive EV) and Q7 (PF>1) logic",
+  "function": "views_builder._core_questions_subset",
+  "scenarios": [
+    {
+      "description": "Sufficient data + positive EV → Q5 answer=true",
+      "overall_20d": {"n": 25, "ev": 0.012, "profit_factor": 1.4},
+      "q5_expected_answer": true,
+      "q7_expected_answer": true
+    },
+    {
+      "description": "Sufficient data + negative EV → Q5 answer=false",
+      "overall_20d": {"n": 25, "ev": -0.005, "profit_factor": 0.8},
+      "q5_expected_answer": false,
+      "q7_expected_answer": false
+    },
+    {
+      "description": "Insufficient data (n<5) → Q5 answer=null",
+      "overall_20d": {"n": 3, "ev": 0.05, "profit_factor": 2.0},
+      "q5_expected_answer": null,
+      "q7_expected_answer": true
+    }
+  ]
+}

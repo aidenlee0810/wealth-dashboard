@@ -1,0 +1,28 @@
+{
+  "scenario_id": "gold_016_governor_ledger",
+  "description": "_governor_ledger: cut = w_pure - w_policy; avoided (ret<0) vs missed (ret>0); net = avoided - missed",
+  "function": "views_builder._governor_ledger",
+  "frozen_inputs": {
+    "rows": [
+      {"horizon": 20, "abs_ret": -0.10, "target_weight_generic": 0.04, "risk_adjusted_weight": 0.0},
+      {"horizon": 20, "abs_ret": 0.08, "target_weight_generic": 0.04, "risk_adjusted_weight": 0.0},
+      {"horizon": 20, "abs_ret": -0.06, "target_weight_generic": 0.025, "risk_adjusted_weight": 0.0125},
+      {"horizon": 20, "abs_ret": 0.20, "target_weight_generic": 0.04, "risk_adjusted_weight": 0.04}
+    ]
+  },
+  "expected_outputs": {
+    "20": {
+      "n_governed": 3,
+      "n_blocked": 2,
+      "avoided_drawdown": 0.00475,
+      "missed_upside": 0.0032,
+      "net_governor_value": 0.00155,
+      "governor_verdict": "beneficial"
+    }
+  },
+  "tolerance": {
+    "avoided_drawdown": 0.00001,
+    "missed_upside": 0.00001,
+    "net_governor_value": 0.00001
+  }
+}

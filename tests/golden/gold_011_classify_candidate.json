@@ -1,0 +1,47 @@
+{
+  "scenario_id": "gold_011_classify_candidate",
+  "description": "classify_candidate: Core requires days_active≥5 + APPROVED; Tactical for high score but new; Reject for BLOCKED",
+  "function": "scorers.synthesis.classify_candidate",
+  "test_cases": [
+    {
+      "composite": 80,
+      "days_active": 7,
+      "risk_status": "APPROVED",
+      "dq": 90,
+      "expected": "Core",
+      "note": "High score + 7 days + APPROVED = Core"
+    },
+    {
+      "composite": 80,
+      "days_active": 3,
+      "risk_status": "APPROVED",
+      "dq": 90,
+      "expected": "Tactical",
+      "note": "High score but only 3 days active → Tactical (ADR 003)"
+    },
+    {
+      "composite": 70,
+      "days_active": 10,
+      "risk_status": "APPROVED",
+      "dq": 90,
+      "expected": "Core",
+      "note": "Good score + seasoned"
+    },
+    {
+      "composite": 55,
+      "days_active": 10,
+      "risk_status": "APPROVED",
+      "dq": 75,
+      "expected": "Watchlist",
+      "note": "Mid-range score + seasoned = Watchlist"
+    },
+    {
+      "composite": 80,
+      "days_active": 5,
+      "risk_status": "BLOCKED",
+      "dq": 30,
+      "expected": "Reject",
+      "note": "BLOCKED → always Reject"
+    }
+  ]
+}

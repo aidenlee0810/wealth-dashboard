@@ -1,0 +1,16 @@
+{
+  "scenario_id": "gold_010_target_weight_thresholds",
+  "description": "_target_weight composite thresholds: ≥70→0.04, ≥58→0.025, ≥48→0.012, <48→0.0; BLOCKED→0.0; SIZE_REDUCED→halved",
+  "function": "signal_generator._target_weight",
+  "test_cases": [
+    {"composite": 75, "risk_status": "APPROVED", "expected": 0.04},
+    {"composite": 70, "risk_status": "APPROVED", "expected": 0.04},
+    {"composite": 65, "risk_status": "APPROVED", "expected": 0.025},
+    {"composite": 58, "risk_status": "APPROVED", "expected": 0.025},
+    {"composite": 50, "risk_status": "APPROVED", "expected": 0.012},
+    {"composite": 48, "risk_status": "APPROVED", "expected": 0.012},
+    {"composite": 45, "risk_status": "APPROVED", "expected": 0.0},
+    {"composite": 80, "risk_status": "BLOCKED", "expected": 0.0},
+    {"composite": 80, "risk_status": "SIZE_REDUCED", "expected": 0.02}
+  ]
+}

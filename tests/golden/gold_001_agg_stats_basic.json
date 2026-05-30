@@ -1,0 +1,40 @@
+{
+  "scenario_id": "gold_001_agg_stats_basic",
+  "description": "Basic _agg_stats: 3 wins, 2 losses → EV/PF/payoff/hit_rate",
+  "function": "views_builder._agg_stats",
+  "frozen_inputs": {
+    "rows": [
+      {"abs_ret": 0.08, "rel_spy": 0.05, "rel_qqq": 0.04, "mae": -0.02, "mfe": 0.10, "mdd": -0.03},
+      {"abs_ret": 0.05, "rel_spy": 0.03, "rel_qqq": 0.02, "mae": -0.01, "mfe": 0.07, "mdd": -0.02},
+      {"abs_ret": 0.03, "rel_spy": 0.01, "rel_qqq": 0.01, "mae": -0.01, "mfe": 0.05, "mdd": -0.01},
+      {"abs_ret": -0.04, "rel_spy": -0.02, "rel_qqq": -0.02, "mae": -0.06, "mfe": 0.01, "mdd": -0.06},
+      {"abs_ret": -0.06, "rel_spy": -0.03, "rel_qqq": -0.03, "mae": -0.08, "mfe": 0.00, "mdd": -0.08}
+    ]
+  },
+  "expected_outputs": {
+    "n": 5,
+    "hit_rate": 0.6,
+    "avg_ret": 0.012,
+    "avg_win": 0.053333,
+    "avg_loss": -0.05,
+    "ev": 0.012,
+    "profit_factor": 1.6,
+    "payoff_ratio": 1.067,
+    "avg_rel_spy": 0.008,
+    "avg_mae": -0.036,
+    "avg_mfe": 0.046,
+    "avg_mdd": -0.04
+  },
+  "tolerance": {
+    "avg_ret": 0.0001,
+    "avg_win": 0.0001,
+    "avg_loss": 0.0001,
+    "ev": 0.0001,
+    "profit_factor": 0.01,
+    "payoff_ratio": 0.01,
+    "avg_rel_spy": 0.0001,
+    "avg_mae": 0.0001,
+    "avg_mfe": 0.0001,
+    "avg_mdd": 0.0001
+  }
+}

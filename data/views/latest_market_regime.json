@@ -1,0 +1,64 @@
+{
+  "snapshot_date": "2026-05-29",
+  "market_date": "2026-05-29",
+  "executed_at_utc": "2026-05-30T18:18:34.042680+00:00",
+  "feature_version": "4.5.0",
+  "universe_version": "2.0.0",
+  "generated_at_utc": "2026-05-30T18:24:50.019257+00:00",
+  "date": "2026-05-29",
+  "regime": "ROTATION_MARKET",
+  "secondary": "mixed_leadership",
+  "confidence": 0.55,
+  "regime_version": "3.0.0",
+  "evidence": {
+    "spy_ret20": 0.0528,
+    "spy_above_sma50": true,
+    "spy_ret1m": 0.0629,
+    "spy_ret3m": 0.1023,
+    "market_breadth_pct": 54.7,
+    "vix": 16.1391,
+    "hy_oas": 3.0937,
+    "yield_curve_t10y2y": 0.0106
+  },
+  "favored_themes": [
+    "AI Infrastructure",
+    "Semiconductors",
+    "Cloud & Enterprise Software",
+    "Cybersecurity"
+  ],
+  "avoided_themes": [
+    "Defense & Aerospace",
+    "Biopharma & Genomics",
+    "Medical Devices & MedTech"
+  ],
+  "favored_sectors": [
+    "XLK",
+    "XLF",
+    "XLE"
+  ],
+  "avoided_sectors": [
+    "XLU",
+    "XLV"
+  ],
+  "emerging_themes": [
+    "Defense & Aerospace",
+    "Biopharma & Genomics"
+  ],
+  "fading_themes": [
+    "Electrification & Grid",
+    "Media & Streaming",
+    "Nuclear & Power Infrastructure",
+    "Fintech & Digital Payments",
+    "E-commerce & Consumer Internet",
+    "Medical Devices & MedTech"
+  ],
+  "effective_weights": {
+    "bq": 0.22,
+    "val": 0.15,
+    "growth": 0.12,
+    "tech": 0.18,
+    "sec_theme": 0.2,
+    "macro": 0.05,
+    "risk": 0.08
+  }
+}

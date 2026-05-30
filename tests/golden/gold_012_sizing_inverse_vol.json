@@ -1,0 +1,18 @@
+{
+  "scenario_id": "gold_012_sizing_inverse_vol",
+  "description": "inverse_volatility: lower-vol tickers get higher weight; weights sum to 1.0",
+  "function": "sizing.inverse_volatility",
+  "frozen_inputs": {
+    "vols": {"NVDA": 0.50, "AAPL": 0.25, "KO": 0.15}
+  },
+  "expected_outputs": {
+    "KO_gt_AAPL": true,
+    "AAPL_gt_NVDA": true,
+    "sum_approx_1": true
+  },
+  "constraints": [
+    "KO_weight > AAPL_weight",
+    "AAPL_weight > NVDA_weight",
+    "abs(sum(weights) - 1.0) < 1e-6"
+  ]
+}

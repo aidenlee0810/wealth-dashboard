@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ko" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>투자 리서치 플랫폼</title>
+  <!-- Tailwind CSS (same CDN as wealth dashboard) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: { surface: '#0f172a', card: '#1e293b' } } }
+    };
+  </script>
+  <!-- Chart.js 4.4.0 (same version as wealth dashboard) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+  <!-- Shared CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <style>
+    body { background-color: #0f172a; color: #e2e8f0; font-family: 'Inter', system-ui, sans-serif; }
+    .tab-btn { transition: all 0.15s ease; }
+    .tab-btn:hover { background-color: rgba(51,65,85,0.5); }
+    .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+    canvas { display: block; }
+    /* Consistent scrollbar */
+    ::-webkit-scrollbar { width: 6px; height: 6px; }
+    ::-webkit-scrollbar-track { background: #1e293b; }
+    ::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+    /* DB mode badge */
+    .mode-badge { display:inline-flex; align-items:center; gap:4px; padding:2px 8px; border-radius:9999px; font-size:11px; font-weight:500; white-space:nowrap; }
+    .mode-live     { background:rgba(16,185,129,.15); color:#34d399; border:1px solid rgba(16,185,129,.3); }
+    .mode-static   { background:rgba(234,179, 8,.12); color:#fbbf24; border:1px solid rgba(234,179, 8,.25); }
+    .mode-stale    { background:rgba(249,115, 22,.12); color:#fb923c; border:1px solid rgba(249,115, 22,.25); }
+    .mode-fallback { background:rgba(239, 68, 68,.12); color:#f87171; border:1px solid rgba(239, 68, 68,.25); }
+    .mode-loading  { background:rgba(100,116,139,.12); color:#94a3b8; border:1px solid rgba(100,116,139,.2); }
+  </style>
+</head>
+<body class="min-h-screen">
+
+  <!-- ── Header ─────────────────────────────────────────────────────────── -->
+  <header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-slate-700/60">
+    <div class="max-w-screen-xl mx-auto px-4 py-3">
+      <div class="flex items-center gap-4 flex-wrap">
+        <!-- Back link -->
+        <a id="dashboard-link" href="index.html" class="text-slate-500 hover:text-slate-200 transition-colors flex items-center gap-1 text-sm">
+          ← 대시보드
+        </a>
+        <div class="w-px h-5 bg-slate-700"></div>
+        <!-- Title -->
+        <span class="text-emerald-400 font-bold text-base hidden sm:block">📊 투자 리서치</span>
+        <!-- Ticker search -->
+        <div class="flex items-center gap-2 flex-1 max-w-xs">
+          <input id="ticker-search" type="text" placeholder="종목 검색 (예: AAPL)"
+            class="bg-slate-800 border border-slate-600 rounded-lg px-3 py-1.5 text-sm text-white w-full
+                   focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/40"
+            autocomplete="off" spellcheck="false">
+          <button id="ticker-search-btn"
+            class="bg-emerald-600 hover:bg-emerald-500 text-white px-3 py-1.5 rounded-lg text-sm font-medium transition-colors whitespace-nowrap">
+            검색
+          </button>
+        </div>
+        <!-- Ticker info area -->
+        <div id="ticker-header" class="flex-1 min-w-0">
+          <span class="text-slate-500 text-sm">종목을 검색하세요</span>
+        </div>
+        <!-- Demo mode button -->
+        <button id="demo-btn" onclick="DEMO_RESEARCH.activate(); window._reloadAllTabs();"
+          class="bg-amber-600/80 hover:bg-amber-500 text-white px-3 py-1.5 rounded-lg text-xs font-medium transition-colors whitespace-nowrap hidden sm:block">
+          🔍 데모 보기
+        </button>
+        <!-- Settings button -->
+        <button id="settings-btn" onclick="_openSettings()"
+          class="flex items-center gap-1.5 bg-slate-700/60 hover:bg-slate-600/60 border border-slate-600/50 text-slate-300 hover:text-white px-3 py-1.5 rounded-lg text-xs font-medium transition-colors whitespace-nowrap"
+          title="API 키 설정">
+          ⚙️ <span id="settings-btn-label">API 설정</span>
+        </button>
+        <!-- DB mode indicator (populated by db-client.js) -->
+        <span id="db-mode-badge" class="mode-badge mode-loading hidden sm:inline-flex">⟳ DB…</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── Tab Navigation ──────────────────────────────────────────────────── -->
+  <div class="bg-slate-800/50 border-b border-slate-700/60">
+    <div class="max-w-screen-xl mx-auto px-4">
+      <nav class="flex gap-1 overflow-x-auto py-2 scrollbar-none">
+        <button id="btn-candidates" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap" data-tab="candidates">
+          🔭 신규편입 후보
+        </button>
+        <button id="btn-timing" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap" data-tab="timing">
+          🎯 타이밍
+        </button>
+        <button id="btn-macro" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap" data-tab="macro">
+          🌐 매크로
+        </button>
+        <button id="btn-fundamentals" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap" data-tab="fundamentals">
+          📊 펀더멘털
+        </button>
+        <button id="btn-sectors" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap" data-tab="sectors">
+          🏭 섹터분석
+        </button>
+        <button id="btn-technicals" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap" data-tab="technicals">
+          📈 기술분석
+        </button>
+        <button id="btn-risk" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap" data-tab="risk">
+          ⚖️ 리스크
+        </button>
+        <button id="btn-gurus" class="tab-btn px-4 py-2 rounded-lg text-sm font-medium whitespace-nowrap" data-tab="gurus">
+          🧠 거장 포트
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ── API Key Warning (shown if keys not configured) ──────────────────── -->
+  <div id="api-warning" class="hidden">
+    <div class="max-w-screen-xl mx-auto px-4 pt-4">
+      <div class="bg-amber-950/30 border border-amber-700/50 rounded-xl px-5 py-3 text-sm text-amber-300 flex items-center justify-between gap-4">
+        <div>
+          <span class="font-semibold">⚙️ API 키 설정 필요</span>
+          <span class="text-amber-400/80 text-xs ml-3">데이터를 불러오려면 Finnhub · FRED API 키가 필요합니다</span>
+        </div>
+        <button onclick="_openSettings()" class="shrink-0 bg-amber-600/80 hover:bg-amber-500 text-white text-xs px-4 py-1.5 rounded-lg transition-colors whitespace-nowrap">
+          ⚙️ 지금 설정하기
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Main Content ─────────────────────────────────────────────────────── -->
+  <main class="max-w-screen-xl mx-auto px-4 py-6">
+    <!-- Candidates Tab -->
+    <div id="tab-candidates" class="hidden"></div>
+    <!-- Timing Tab -->
+    <div id="tab-timing" class="hidden"></div>
+    <!-- Macro Tab -->
+    <div id="tab-macro" class="hidden"></div>
+    <!-- Fundamentals Tab -->
+    <div id="tab-fundamentals" class="hidden"></div>
+    <!-- Sectors Tab -->
+    <div id="tab-sectors" class="hidden"></div>
+    <!-- Technicals Tab -->
+    <div id="tab-technicals" class="hidden"></div>
+    <!-- Risk Tab -->
+    <div id="tab-risk" class="hidden"></div>
+    <!-- Gurus Tab -->
+    <div id="tab-gurus" class="hidden"></div>
+  </main>
+
+  <!-- ── Footer ──────────────────────────────────────────────────────────── -->
+  <footer class="border-t border-slate-800 mt-12 py-6 text-center text-xs text-slate-600">
+    투자 리서치 플랫폼 — Wealth Dashboard 연동 | 데이터: Finnhub · FRED · SEC EDGAR<br>
+    본 플랫폼은 정보 제공 목적이며 투자 조언이 아닙니다.
+  </footer>
+
+  <!-- ── Settings Modal ────────────────────────────────────────────────────── -->
+  <div id="settings-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="document.getElementById('settings-modal').classList.add('hidden')"></div>
+    <div class="relative bg-slate-800 border border-slate-600 rounded-2xl w-full max-w-md shadow-2xl">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-slate-700">
+        <div class="font-bold text-white">⚙️ API 키 설정</div>
+        <button onclick="document.getElementById('settings-modal').classList.add('hidden')" class="text-slate-400 hover:text-white text-xl leading-none">×</button>
+      </div>
+      <div class="px-6 py-5 space-y-4">
+        <div>
+          <label class="text-xs text-slate-400 font-medium block mb-1.5">Finnhub API Key <span class="text-slate-500">(무료 · 필수)</span></label>
+          <input id="input-finnhub" type="text" placeholder="예: d1a2b3c4d5e6..." autocomplete="off" spellcheck="false"
+            class="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/30 font-mono">
+          <div class="text-xs text-slate-500 mt-1">발급: <a href="https://finnhub.io" target="_blank" class="text-emerald-400 hover:underline">finnhub.io</a> → 무료 회원가입 → API Key 복사</div>
+        </div>
+        <div>
+          <label class="text-xs text-slate-400 font-medium block mb-1.5">FRED API Key <span class="text-slate-500">(무료 · 매크로 탭 필요)</span></label>
+          <input id="input-fred" type="text" placeholder="예: abcd1234efgh5678..." autocomplete="off" spellcheck="false"
+            class="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/30 font-mono">
+          <div class="text-xs text-slate-500 mt-1">발급: <a href="https://fredaccount.stlouisfed.org/apikey" target="_blank" class="text-emerald-400 hover:underline">fred.stlouisfed.org</a> → Request API Key</div>
+        </div>
+        <div>
+          <label class="text-xs text-slate-400 font-medium block mb-1.5">FMP API Key <span class="text-slate-500">(선택 · $14/월 · DCF/ROIC 강화)</span></label>
+          <input id="input-fmp" type="text" placeholder="예: abc123..." autocomplete="off" spellcheck="false"
+            class="w-full bg-slate-700 border border-slate-600 rounded-lg px-3 py-2 text-sm text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500/30 font-mono">
+          <div class="text-xs text-slate-500 mt-1">발급: <a href="https://financialmodelingprep.com" target="_blank" class="text-emerald-400 hover:underline">financialmodelingprep.com</a> (없어도 90% 동작)</div>
+        </div>
+        <div class="bg-slate-700/40 rounded-lg px-4 py-3 text-xs text-slate-400">
+          🔒 키는 이 브라우저의 localStorage에만 저장됩니다. 서버로 전송되지 않습니다.
+        </div>
+      </div>
+      <div class="px-6 pb-5 flex gap-3">
+        <button onclick="_saveApiKeys()"
+          class="flex-1 bg-emerald-600 hover:bg-emerald-500 text-white font-medium py-2 rounded-lg text-sm transition-colors">
+          저장 및 적용
+        </button>
+        <button onclick="_clearApiKeys()"
+          class="bg-slate-700 hover:bg-slate-600 text-slate-300 font-medium py-2 px-4 rounded-lg text-sm transition-colors">
+          초기화
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Toast container ─────────────────────────────────────────────────── -->
+  <div id="toast-container" class="fixed bottom-4 right-4 flex flex-col gap-2 z-50 max-w-xs"></div>
+
+  <!-- ── Scripts (order matters: config → cache → state → api → ui → charts → modules) ── -->
+  <script src="config.js?v=2"></script>
+  <!-- Private local overrides (gitignored; absent on the public site → harmless 404) -->
+  <script>
+  // ── API Key loader: config.local.js > config.js > localStorage ──────────────
+  // config.js 에 키가 있으면 항상 우선. 없을 때만 localStorage fallback.
+  // config.js 키가 있으면 localStorage도 최신으로 동기화.
+  (function() {
+    const saved = JSON.parse(localStorage.getItem('wr_api_keys') || '{}');
+    if (!RESEARCH_CONFIG.FINNHUB_KEY && saved.finnhub) RESEARCH_CONFIG.FINNHUB_KEY = saved.finnhub;
+    if (!RESEARCH_CONFIG.FRED_KEY    && saved.fred)    RESEARCH_CONFIG.FRED_KEY    = saved.fred;
+    if (!RESEARCH_CONFIG.FMP_KEY     && saved.fmp)     RESEARCH_CONFIG.FMP_KEY     = saved.fmp;
+    // Sync localStorage with config.js values so settings modal shows correct state
+    localStorage.setItem('wr_api_keys', JSON.stringify({
+      finnhub: RESEARCH_CONFIG.FINNHUB_KEY || saved.finnhub || '',
+      fred:    RESEARCH_CONFIG.FRED_KEY    || saved.fred    || '',
+      fmp:     RESEARCH_CONFIG.FMP_KEY     || saved.fmp     || '',
+    }));
+  })();
+
+  function _updateSettingsBtnLabel() {
+    const saved = JSON.parse(localStorage.getItem('wr_api_keys') || '{}');
+    const label = document.getElementById('settings-btn-label');
+    if (!label) return;
+    const keys = [saved.finnhub, saved.fred, saved.fmp].filter(Boolean);
+    if (keys.length === 0) {
+      label.textContent = 'API 설정';
+      label.className = '';
+    } else {
+      const names = [];
+      if (saved.finnhub) names.push('Finnhub');
+      if (saved.fred)    names.push('FRED');
+      if (saved.fmp)     names.push('FMP');
+      label.textContent = '✅ ' + names.join(' · ') + ' 설정됨';
+      label.className = 'text-emerald-400';
+    }
+  }
+  // Run after DOM is ready
+  document.addEventListener('DOMContentLoaded', _updateSettingsBtnLabel);
+
+  function _saveApiKeys() {
+    const finnhub = document.getElementById('input-finnhub').value.trim();
+    const fred    = document.getElementById('input-fred').value.trim();
+    const fmp     = document.getElementById('input-fmp').value.trim();
+    localStorage.setItem('wr_api_keys', JSON.stringify({ finnhub, fred, fmp }));
+    // Apply immediately to live RESEARCH_CONFIG
+    if (finnhub) RESEARCH_CONFIG.FINNHUB_KEY = finnhub;
+    if (fred)    RESEARCH_CONFIG.FRED_KEY    = fred;
+    if (fmp)     RESEARCH_CONFIG.FMP_KEY     = fmp;
+    // Hide API warning if keys now set
+    if (finnhub || fred) document.getElementById('api-warning')?.classList.add('hidden');
+    document.getElementById('settings-modal').classList.add('hidden');
+    _updateSettingsBtnLabel();
+    CACHE.clearAll();
+    if (window._reloadAllTabs) window._reloadAllTabs();
+  }
+
+  function _clearApiKeys() {
+    localStorage.removeItem('wr_api_keys');
+    ['input-finnhub','input-fred','input-fmp'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.value = '';
+    });
+    RESEARCH_CONFIG.FINNHUB_KEY = '';
+    RESEARCH_CONFIG.FRED_KEY = '';
+    RESEARCH_CONFIG.FMP_KEY = '';
+  }
+
+  function _openSettings() {
+    const saved = JSON.parse(localStorage.getItem('wr_api_keys') || '{}');
+    document.getElementById('input-finnhub').value = saved.finnhub || '';
+    document.getElementById('input-fred').value    = saved.fred    || '';
+    document.getElementById('input-fmp').value     = saved.fmp     || '';
+    document.getElementById('settings-modal').classList.remove('hidden');
+  }
+  </script>
+  <script src="research/db-client.js?v=1"></script>
+  <script src="research/live-price.js?v=1"></script>
+  <script src="research/data-quality.js?v=3"></script>
+  <script src="research/signal-result.js?v=4"></script>
+  <script src="research/portfolio-engine.js?v=4"></script>
+  <script src="research/cache.js?v=2"></script>
+  <script src="research/state.js?v=4"></script>
+  <script src="research/api.js?v=18"></script>
+  <script src="research/tax-estimator.js?v=1"></script>
+  <script src="research/ui.js?v=4"></script>
+  <script src="research/charts.js?v=2"></script>
+  <script src="research/fundamentals.js?v=7"></script>
+  <script src="research/indicators.js?v=3"></script>
+  <script src="research/chart-engine.js?v=16"></script>
+  <script src="research/pattern-engine.js?v=4"></script>
+  <script src="research/signal-engine.js?v=11"></script>
+  <script src="research/technical-ui.js?v=11"></script>
+  <script src="research/technicals.js?v=19"></script>
+  <script src="research/risk.js?v=8"></script>
+  <script src="research/portfolio-stress.js?v=1"></script>
+  <!-- market-regime.js must load before macro/candidate/optimizer/timing/portfolio/validation -->
+  <script src="research/market-regime.js?v=1"></script>
+  <script src="research/daily-snapshot.js?v=1"></script>
+  <script src="research/macro.js?v=10"></script>
+  <script src="research/gurus.js?v=4"></script>
+  <script src="research/theme-discovery.js?v=1"></script>
+  <script src="research/sectors.js?v=7"></script>
+  <script src="research/timing.js?v=13"></script>
+  <script src="research/candidate-universe.js?v=1"></script>
+  <script src="research/universe-builder.js?v=2"></script>
+  <script src="research/candidate.js?v=5"></script>
+  <script src="research/audit-tests.js?v=5"></script>
+  <script src="research/demo.js?v=2"></script>
+
+  <script>
+  // ── App Bootstrap ─────────────────────────────────────────────────────────
+  (function() {
+    // Tab definitions
+    const PUBLIC_TABS = new Set([
+      'candidates',
+      'timing',
+      'macro',
+      'fundamentals',
+      'sectors',
+      'technicals',
+      'risk',
+      'gurus',
+    ]);
+    const PUBLIC_STATIC_SITE =
+      (typeof CONFIG !== 'undefined' && CONFIG.PUBLIC_SITE === true) ||
+      location.hostname.endsWith('github.io') ||
+      new URLSearchParams(location.search).get('public') === '1';
+
+    const ALL_TABS = [
+      { name: 'portfolio',    module: () => PORTFOLIO.init()                      },
+      { name: 'candidates',   module: () => CANDIDATES.init()                     },
+      { name: 'optimizer',    module: () => OPTIMIZER.init()                      },
+      { name: 'timing',       module: () => TIMING.init(STATE.getTicker())        },
+      { name: 'macro',        module: () => MACRO.init()                          },
+      { name: 'fundamentals', module: () => FUNDAMENTALS.init(STATE.getTicker()) },
+      { name: 'sectors',      module: () => SECTORS.init()                        },
+      { name: 'technicals',   module: () => TECHNICALS.init(STATE.getTicker())   },
+      { name: 'risk',         module: () => RISK.init(STATE.getTicker())          },
+      { name: 'gurus',        module: () => GURUS.init()                          },
+      { name: 'validation',   module: () => VALIDATION.init()                     },
+    ];
+    const TABS = PUBLIC_STATIC_SITE
+      ? ALL_TABS.filter(tab => PUBLIC_TABS.has(tab.name))
+      : ALL_TABS;
+
+    if (PUBLIC_STATIC_SITE) {
+      document.getElementById('dashboard-link')?.remove();
+      document.getElementById('settings-btn')?.remove();
+      document.getElementById('demo-btn')?.remove();
+      ALL_TABS.filter(tab => !PUBLIC_TABS.has(tab.name)).forEach(({ name }) => {
+        document.getElementById('btn-' + name)?.remove();
+        document.getElementById('tab-' + name)?.remove();
+      });
+    }
+
+    const _initialized = {};
+
+    function activateTab(targetName) {
+      STATE.setTab(targetName);
+      TABS.forEach(({ name }) => {
+        const btn   = document.getElementById('btn-' + name);
+        const panel = document.getElementById('tab-' + name);
+        const active = name === targetName;
+        if (btn) {
+          btn.classList.toggle('bg-slate-700', active);
+          btn.classList.toggle('text-white',   active);
+          btn.classList.toggle('text-slate-400', !active);
+        }
+        if (panel) panel.classList.toggle('hidden', !active);
+      });
+      // Lazy init
+      if (!_initialized[targetName]) {
+        _initialized[targetName] = true;
+        const tab = TABS.find(t => t.name === targetName);
+        if (tab) tab.module();
+      }
+    }
+
+    // Wire tab buttons
+    TABS.forEach(({ name }) => {
+      const btn = document.getElementById('btn-' + name);
+      if (btn) btn.addEventListener('click', () => activateTab(name));
+    });
+
+    // Ticker search
+    function doSearch() {
+      const raw = document.getElementById('ticker-search').value.trim().toUpperCase();
+      if (!raw) return;
+      STATE.setTicker(raw);
+      // Reset ticker-dependent tabs so they re-init with new ticker
+      ['fundamentals', 'technicals', 'risk', 'timing'].forEach(name => delete _initialized[name]);
+      // Clear charts to prevent stale canvases
+      CHARTS.destroyAll();
+      // Re-render current tab
+      const current = STATE.getTab();
+      const tab = TABS.find(t => t.name === current);
+      if (tab) {
+        _initialized[current] = true;
+        tab.module();
+      }
+    }
+
+    document.getElementById('ticker-search-btn').addEventListener('click', doSearch);
+    document.getElementById('ticker-search').addEventListener('keydown', e => {
+      if (e.key === 'Enter') doSearch();
+    });
+
+    // Restore saved ticker to search box
+    const savedTicker = STATE.getTicker();
+    if (savedTicker) {
+      document.getElementById('ticker-search').value = savedTicker;
+    }
+
+    // Show API warning if keys not configured
+    if (!PUBLIC_STATIC_SITE && !RESEARCH_CONFIG.FINNHUB_KEY && !RESEARCH_CONFIG.FRED_KEY) {
+      document.getElementById('api-warning').classList.remove('hidden');
+    }
+
+    // Activate initial tab (from URL or default)
+    const initialTab = STATE.getTab();
+    const defaultTab = PUBLIC_STATIC_SITE ? 'candidates' : 'fundamentals';
+    const validTab = TABS.find(t => t.name === initialTab) ? initialTab : defaultTab;
+    activateTab(validTab);
+
+    // Global helper: re-init all initialized tabs (used by demo mode)
+    window._reloadAllTabs = function() {
+      CHARTS.destroyAll();
+      Object.keys(_initialized).forEach(k => delete _initialized[k]);
+      const cur = STATE.getTab();
+      const tab = TABS.find(t => t.name === cur);
+      if (tab) { _initialized[cur] = true; tab.module(); }
+    };
+  })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+{
+  "scenario_id": "gold_003_agg_stats_all_losses",
+  "description": "All losses → hit_rate=0.0, EV equals avg_loss",
+  "function": "views_builder._agg_stats",
+  "frozen_inputs": {
+    "rows": [
+      {"abs_ret": -0.05, "rel_spy": -0.03, "rel_qqq": -0.02, "mae": -0.07, "mfe": 0.01, "mdd": -0.07},
+      {"abs_ret": -0.10, "rel_spy": -0.06, "rel_qqq": -0.05, "mae": -0.12, "mfe": 0.00, "mdd": -0.12},
+      {"abs_ret": -0.03, "rel_spy": -0.01, "rel_qqq": -0.01, "mae": -0.04, "mfe": 0.02, "mdd": -0.04}
+    ]
+  },
+  "expected_outputs": {
+    "n": 3,
+    "hit_rate": 0.0,
+    "avg_win": 0.0,
+    "avg_loss": -0.06,
+    "ev": -0.06,
+    "profit_factor": 0.0
+  },
+  "tolerance": {
+    "avg_loss": 0.0001,
+    "ev": 0.0001
+  }
+}

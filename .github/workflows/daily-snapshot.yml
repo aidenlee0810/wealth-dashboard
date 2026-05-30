@@ -1,0 +1,114 @@
+name: Daily Snapshot
+
+# Plan §13. Runs the cloud-only research snapshot after the US close and
+# commits data/db + data/views back to the repo. Personal data is never
+# referenced (a pre-flight guard enforces this).
+
+on:
+  schedule:
+    # 22:00 UTC weekdays = 17:00 EST (Nov-Mar) / 18:00 EDT (Mar-Nov),
+    # i.e. ~2h after the US cash close. GHA cron is always UTC.
+    - cron: '0 22 * * 1-5'
+  workflow_dispatch: {}        # manual trigger anytime
+
+# Never let a manual run collide with the scheduled one.
+concurrency:
+  group: daily-snapshot
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 55
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 2          # need HEAD~1 for restore-on-failure
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies (stdlib-only today; manifest for later phases)
+        run: |
+          pip install -r jobs/requirements.txt
+          pip install pytest
+
+      - name: Pre-flight — block personal data + secret literals
+        run: |
+          bash scripts/ci-guard-personal-data.sh
+          bash scripts/secret-scan.sh
+
+      - name: Data-separation tests (cloud/local isolation)
+        run: python -m pytest tests/test_data_separation.py -q
+
+      # Price + fundamentals auto-sync every run:
+      #   step 2 fetches real price history via Alpaca/Tiingo/Yahoo when keys exist
+      #   step 8 fetches SEC CompanyFacts (keyless) + Finnhub metrics
+      #   step 9 re-scores features. Valuation is enabled only for real history.
+      # Repo secrets (Settings → Secrets and variables → Actions):
+      #   ALPACA_KEY / ALPACA_SECRET — preferred real price-history provider
+      #   TIINGO_KEY                 — optional fallback price-history provider
+      #   FINNHUB_KEY                — Finnhub quote + /stock/metric fundamentals
+      #   FRED_KEY                   — FRED macro_daily series
+      # Optional repo variable (Settings → Variables) for SEC fair-access:
+      #   SEC_USER_AGENT — "YourName your@email" (SEC asks for a real contact)
+      # SEC EDGAR is keyless. A missing FINNHUB_KEY degrades gracefully (SEC-only
+      # fundamentals + keyless price fallback); the run logs key presence as
+      # booleans only — key VALUES are never printed or committed.
+      - name: Run snapshot
+        env:
+          ALPACA_KEY:     ${{ secrets.ALPACA_KEY }}
+          ALPACA_SECRET:  ${{ secrets.ALPACA_SECRET }}
+          TIINGO_KEY:     ${{ secrets.TIINGO_KEY }}
+          FINNHUB_KEY:    ${{ secrets.FINNHUB_KEY }}
+          FRED_KEY:       ${{ secrets.FRED_KEY }}
+          SEC_USER_AGENT: ${{ vars.SEC_USER_AGENT }}
+          SNAPSHOT_LIMIT: ${{ vars.SNAPSHOT_LIMIT }}
+        run: |
+          LIMIT="${SNAPSHOT_LIMIT:-120}"
+          echo "Snapshot limit: ${LIMIT}"
+          python -u jobs/daily_snapshot.py --skip-git --limit "${LIMIT}"
+
+      - name: Repo size check
+        run: |
+          REPO_KB=$(du -sk . | cut -f1)
+          DB_KB=$(du -sk data/db/research_market.sqlite 2>/dev/null | cut -f1 || echo 0)
+          echo "Repo: ${REPO_KB}KB | DB: ${DB_KB}KB"
+          if [ "$REPO_KB" -gt 500000 ]; then
+            echo "::warning::Repo size >500MB — review archive policy (Plan §12)."
+          fi
+
+      - name: Commit and push (rebase-safe)
+        run: |
+          git config user.name  "snapshot-bot"
+          git config user.email "snapshot@users.noreply.github.com"
+          git add data/db/research_market.sqlite data/views/ data/snapshots/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git commit -m "snapshot $(date -u +%Y-%m-%d)"
+          for attempt in 1 2 3; do
+            git pull --rebase origin "${GITHUB_REF_NAME:-main}" && \
+              git push origin "HEAD:${GITHUB_REF_NAME:-main}" && break
+            echo "push attempt $attempt failed; retrying…"
+            sleep $((attempt * 10))
+          done
+
+      - name: Surface critical alerts
+        if: always()
+        run: |
+          if [ -f data/views/latest_alerts.json ]; then
+            CRIT=$(python -c "import json;print(json.load(open('data/views/latest_alerts.json')).get('critical_count',0))")
+            echo "Critical alerts: ${CRIT}"
+            if [ "${CRIT}" -gt 0 ]; then
+              echo "::error::${CRIT} critical alert(s) — see data/views/latest_alerts.json"
+              exit 1
+            fi
+          fi

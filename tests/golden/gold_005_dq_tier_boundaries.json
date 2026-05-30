@@ -1,0 +1,15 @@
+{
+  "scenario_id": "gold_005_dq_tier_boundaries",
+  "description": "_dq_tier boundary values: 49→<50, 50→50-69, 70→70-84, 85→85+, None→unknown",
+  "function": "views_builder._dq_tier",
+  "test_cases": [
+    {"input": null,   "expected": "unknown"},
+    {"input": 49,     "expected": "<50"},
+    {"input": 50,     "expected": "50-69"},
+    {"input": 69,     "expected": "50-69"},
+    {"input": 70,     "expected": "70-84"},
+    {"input": 84,     "expected": "70-84"},
+    {"input": 85,     "expected": "85+"},
+    {"input": 100,    "expected": "85+"}
+  ]
+}

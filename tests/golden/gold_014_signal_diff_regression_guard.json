@@ -1,0 +1,25 @@
+{
+  "scenario_id": "gold_014_signal_diff_regression_guard",
+  "description": "signal_diff regression_warning triggers when >20% of common tickers change state",
+  "function": "views_builder._regression_guard_logic",
+  "test_cases": [
+    {
+      "common_count": 10,
+      "state_change_count": 3,
+      "expected_warning": true,
+      "note": "3/10 = 30% > 20% threshold"
+    },
+    {
+      "common_count": 10,
+      "state_change_count": 2,
+      "expected_warning": false,
+      "note": "2/10 = 20%, not strictly > threshold"
+    },
+    {
+      "common_count": 0,
+      "state_change_count": 0,
+      "expected_warning": false,
+      "note": "No common tickers → no warning"
+    }
+  ]
+}

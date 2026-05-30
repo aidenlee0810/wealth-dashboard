@@ -1,0 +1,615 @@
+{
+  "index": "nasdaq100",
+  "source": "wikipedia",
+  "source_url": "https://en.wikipedia.org/wiki/Nasdaq-100",
+  "scraped_at_utc": "2026-05-28T19:15:42.779280+00:00",
+  "count": 101,
+  "constituents": [
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Computer Manufacturing",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb",
+      "sector": "Diversified Commercial Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ADI",
+      "name": "Analog Devices",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ADP",
+      "name": "Automatic Data Processing",
+      "sector": "Diversified Commercial Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ADSK",
+      "name": "Autodesk",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "AEP",
+      "name": "American Electric Power",
+      "sector": "Electric Utilities",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ALNY",
+      "name": "Alnylam Pharmaceuticals",
+      "sector": "Biotechnology",
+      "sector_etf": null
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "AMGN",
+      "name": "Amgen",
+      "sector": "Biotechnology",
+      "sector_etf": null
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Catalog/Specialty Distribution",
+      "sector_etf": null
+    },
+    {
+      "ticker": "APP",
+      "name": "AppLovin",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ASML",
+      "name": "ASML Holding",
+      "sector": "Industrial Machinery",
+      "sector_etf": null
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "AXON",
+      "name": "Axon Enterprise",
+      "sector": "Ordnance & Accessories",
+      "sector_etf": null
+    },
+    {
+      "ticker": "BKNG",
+      "name": "Booking Holdings",
+      "sector": "Transportation Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "BKR",
+      "name": "Baker Hughes",
+      "sector": "Oil Equipment & Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CCEP",
+      "name": "Coca-Cola Europacific Partners",
+      "sector": "Soft Drinks",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CDNS",
+      "name": "Cadence Design Systems",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy",
+      "sector": "Electric Utilities",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CHTR",
+      "name": "Charter Communications",
+      "sector": "Cable & Other Pay Television Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CMCSA",
+      "name": "Comcast",
+      "sector": "Cable & Other Pay Television Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "sector": "Department/Specialty Retail Stores",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CPRT",
+      "name": "Copart",
+      "sector": "Retail",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "sector": "Computer Communications Equipment",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CSX",
+      "name": "CSX Corporation",
+      "sector": "Railroads",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CTAS",
+      "name": "Cintas",
+      "sector": "Garments & Clothing",
+      "sector_etf": null
+    },
+    {
+      "ticker": "CTSH",
+      "name": "Cognizant",
+      "sector": "EDP Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "DASH",
+      "name": "DoorDash",
+      "sector": "EDP Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "DXCM",
+      "name": "DexCom",
+      "sector": "Medical/Dental Instruments",
+      "sector_etf": null
+    },
+    {
+      "ticker": "EA",
+      "name": "Electronic Arts",
+      "sector": "Miscellaneous Amusement & Recreation Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "EXC",
+      "name": "Exelon",
+      "sector": "Power Generation",
+      "sector_etf": null
+    },
+    {
+      "ticker": "FANG",
+      "name": "Diamondback Energy",
+      "sector": "Oil & Gas Production",
+      "sector_etf": null
+    },
+    {
+      "ticker": "FAST",
+      "name": "Fastenal",
+      "sector": "Construction & Materials",
+      "sector_etf": null
+    },
+    {
+      "ticker": "FER",
+      "name": "Ferrovial",
+      "sector": "Military, Government, Technical",
+      "sector_etf": null
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "sector": "Computer Peripheral Equipment",
+      "sector_etf": null
+    },
+    {
+      "ticker": "GEHC",
+      "name": "GE HealthCare",
+      "sector": "Medical Electronics",
+      "sector_etf": null
+    },
+    {
+      "ticker": "GILD",
+      "name": "Gilead Sciences",
+      "sector": "Biotechnology",
+      "sector_etf": null
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc. (Class C)",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc. (Class A)",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "HON",
+      "name": "Honeywell",
+      "sector": "Aerospace",
+      "sector_etf": null
+    },
+    {
+      "ticker": "IDXX",
+      "name": "Idexx Laboratories",
+      "sector": "Biotechnology",
+      "sector_etf": null
+    },
+    {
+      "ticker": "INSM",
+      "name": "Insmed Incorporated",
+      "sector": "Biotechnology",
+      "sector_etf": null
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "INTU",
+      "name": "Intuit",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
+      "sector": "Industrial Specialties",
+      "sector_etf": null
+    },
+    {
+      "ticker": "KDP",
+      "name": "Keurig Dr Pepper",
+      "sector": "Soft Drinks",
+      "sector_etf": null
+    },
+    {
+      "ticker": "KHC",
+      "name": "Kraft Heinz",
+      "sector": "Packaged Foods",
+      "sector_etf": null
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "sector": "Electronic Components",
+      "sector_etf": null
+    },
+    {
+      "ticker": "LIN",
+      "name": "Linde plc",
+      "sector": "Major Chemicals",
+      "sector_etf": null
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "sector": "Communication Equipment",
+      "sector_etf": null
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "sector": "Industrial Machinery",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MAR",
+      "name": "Marriott International",
+      "sector": "Hotels/Resorts",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MCHP",
+      "name": "Microchip Technology",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MDLZ",
+      "name": "Mondelez International",
+      "sector": "Packaged Foods",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MELI",
+      "name": "Mercado Libre",
+      "sector": "Catalog/Specialty Distribution",
+      "sector_etf": null
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MNST",
+      "name": "Monster Beverage",
+      "sector": "Soft Drinks",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MPWR",
+      "name": "Monolithic Power Systems",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MSTR",
+      "name": "MicroStrategy",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix, Inc.",
+      "sector": "Consumer Electronics",
+      "sector_etf": null
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "NXPI",
+      "name": "NXP Semiconductors",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ODFL",
+      "name": "Old Dominion Freight Line",
+      "sector": "Trucking Freight/Courier Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ORLY",
+      "name": "O'Reilly Automotive",
+      "sector": "Auto & Home Supply Stores",
+      "sector_etf": null
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Computer Peripheral Equipment",
+      "sector_etf": null
+    },
+    {
+      "ticker": "PAYX",
+      "name": "Paychex",
+      "sector": "Diversified Commercial Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "PCAR",
+      "name": "Paccar",
+      "sector": "Motor Vehicles",
+      "sector_etf": null
+    },
+    {
+      "ticker": "PDD",
+      "name": "PDD Holdings",
+      "sector": "EDP Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "PEP",
+      "name": "PepsiCo",
+      "sector": "Soft Drinks",
+      "sector_etf": null
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "sector": "Diversified Commercial Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "sector": "Broadcasting & Communications Equipment",
+      "sector_etf": null
+    },
+    {
+      "ticker": "REGN",
+      "name": "Regeneron Pharmaceuticals",
+      "sector": "Biotechnology",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ROP",
+      "name": "Roper Technologies",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ROST",
+      "name": "Ross Stores",
+      "sector": "Clothing/Shoe/Accessory Stores",
+      "sector_etf": null
+    },
+    {
+      "ticker": "SBUX",
+      "name": "Starbucks",
+      "sector": "Restaurants",
+      "sector_etf": null
+    },
+    {
+      "ticker": "SHOP",
+      "name": "Shopify",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "SNDK",
+      "name": "Sandisk",
+      "sector": "Electronic Components",
+      "sector_etf": null
+    },
+    {
+      "ticker": "SNPS",
+      "name": "Synopsys",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology",
+      "sector": "Electronic Components",
+      "sector_etf": null
+    },
+    {
+      "ticker": "TMUS",
+      "name": "T-Mobile US",
+      "sector": "Telecommunications Service Providers",
+      "sector_etf": null
+    },
+    {
+      "ticker": "TRI",
+      "name": "Thomson Reuters",
+      "sector": "Computer Software",
+      "sector_etf": null
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "sector": "Automobiles & Parts",
+      "sector_etf": null
+    },
+    {
+      "ticker": "TTWO",
+      "name": "Take-Two Interactive",
+      "sector": "Miscellaneous Amusement & Recreation Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "TXN",
+      "name": "Texas Instruments",
+      "sector": "Semiconductors",
+      "sector_etf": null
+    },
+    {
+      "ticker": "VRSK",
+      "name": "Verisk Analytics",
+      "sector": "Diversified Commercial Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "VRTX",
+      "name": "Vertex Pharmaceuticals",
+      "sector": "Biotechnology",
+      "sector_etf": null
+    },
+    {
+      "ticker": "WBD",
+      "name": "Warner Bros. Discovery",
+      "sector": "Miscellaneous Amusement & Recreation Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "WDAY",
+      "name": "Workday, Inc.",
+      "sector": "EDP Services",
+      "sector_etf": null
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "sector": "Electronic Components",
+      "sector_etf": null
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "sector": "Department/Specialty Retail Stores",
+      "sector_etf": null
+    },
+    {
+      "ticker": "XEL",
+      "name": "Xcel Energy",
+      "sector": "Power Generation",
+      "sector_etf": null
+    },
+    {
+      "ticker": "ZS",
+      "name": "Zscaler",
+      "sector": "EDP Services",
+      "sector_etf": null
+    }
+  ]
+}

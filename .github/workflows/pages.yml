@@ -1,0 +1,132 @@
+name: Deploy GitHub Pages
+
+# Publishes the STATIC front-end (research.html + data/views/*.json) to GitHub
+# Pages. The public site runs in Static Mode: it reads data/views/*.json only —
+# no server, no API keys, no personal data. Keys live in GitHub Secrets and are
+# used solely by the daily-snapshot job (server-side), never shipped to Pages.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'research.html'
+      - 'config.js'
+      - 'research/**'
+      - 'data/views/**'
+      - 'data/*.json'
+      - '.github/workflows/pages.yml'
+  workflow_dispatch: {}
+
+# Pages needs these; nothing here can read repo secrets.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build-deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # HARD GATE before anything is published publicly.
+      - name: Pre-flight — block personal data + secret literals
+        run: |
+          bash scripts/ci-guard-personal-data.sh
+          bash scripts/secret-scan.sh
+
+      - uses: actions/configure-pages@v5
+
+      - name: Assemble static site (public research only — no personal dashboard)
+        run: |
+          set -euo pipefail
+          mkdir -p _site/data
+          # Publish only the public research app. Do not copy index.html: that is
+          # the private Google Sheets / wealth dashboard shell.
+          cp research.html _site/
+          cat > _site/config.js <<'JS'
+          // Public GitHub Pages config. Private account settings are intentionally
+          // omitted; the public site serves static research views.
+          const CONFIG = {
+            PUBLIC_SITE: true,
+            PORTFOLIO_TARGETS: {},
+            ACCOUNT_RULES: [],
+            REBALANCE_THRESHOLD: 5,
+          };
+
+          const RESEARCH_CONFIG = {
+            FINNHUB_KEY: '',
+            FMP_KEY: '',
+            FRED_KEY: '',
+            GURUS: {
+              '워렌 버핏 (Berkshire Hathaway)': '0001067983',
+              '빌 액만 (Pershing Square)': '0001336528',
+              '마이클 버리 (Scion Asset Mgmt)': '0001649339',
+              '데이비드 아인혼 (Greenlight)': '0001079114',
+              '데이비드 테퍼 (Appaloosa)': '0001003237',
+              '스탠 드러켄밀러 (Duquesne)': '0001536411',
+              '세스 클라만 (Baupost Group)': '0001061219',
+              '모니쉬 파브라이 (Pabrai Funds)': '0001173334',
+              '하워드 마크스 (Oaktree Capital)': '0000949509',
+            },
+          };
+          JS
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="ko">
+          <head>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <meta http-equiv="refresh" content="0; url=research.html">
+            <title>Wealth Dashboard Research</title>
+          </head>
+          <body>
+            <p><a href="research.html">투자 리서치 화면으로 이동</a></p>
+          </body>
+          </html>
+          HTML
+          grep -R "Google Sheets\\|Tiller\\|gapi\\|google.accounts" _site/*.html _site/config.js && {
+            echo "Personal dashboard text leaked into Pages artifact"; exit 1;
+          } || true
+          # public front-end assets (target-last cp — portable BSD/GNU)
+          cp -r research _site/ 2>/dev/null || true
+          # Remove local/personal modules from the public artifact. Local users
+          # still have these files in the repo; GitHub Pages does not serve them.
+          rm -f _site/research/portfolio.js _site/research/optimizer.js _site/research/validation.js
+          python3 - <<'PY'
+          from pathlib import Path
+          p = Path('_site/research.html')
+          s = p.read_text()
+          import re
+          # Drop the private-overrides tag (config.local.js is never published).
+          s = re.sub(r'\n\s*<script src="config\.local\.js.*?</script>', '', s)
+          for tab in ('portfolio', 'optimizer', 'validation'):
+              s = re.sub(r'\n\s*<button id="btn-' + tab + r'".*?</button>', '', s, flags=re.S)
+              s = re.sub(r'\n\s*<!-- [^<]* -->\n\s*<div id="tab-' + tab + r'" class="hidden"></div>', '', s)
+          for module in ('optimizer', 'portfolio', 'validation'):
+              s = re.sub(r'\n\s*<script src="research/' + module + r'\.js(?:\?v=[^"]*)?"></script>', '', s)
+          p.write_text(s)
+          PY
+          # data the front-end fetches in Static Mode
+          cp data/*.json _site/data/ 2>/dev/null || true
+          cp -r data/views _site/data/ 2>/dev/null || true
+          # NEVER publish the backend or any DB: only the curated front-end dirs
+          # above are copied, and the pre-flight personal-data guard already
+          # scanned the whole tree. Drop server-side data dirs as belt-and-braces.
+          rm -rf _site/data/db _site/data/snapshots _site/data/config 2>/dev/null || true
+          echo "Published tree:"; find _site -maxdepth 2 -type f | sort | head -60
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

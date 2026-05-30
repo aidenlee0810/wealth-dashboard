@@ -1,0 +1,120 @@
+{
+  "snapshot_date": "2026-05-29",
+  "market_date": "2026-05-29",
+  "executed_at_utc": "2026-05-30T18:18:34.042680+00:00",
+  "feature_version": "4.5.0",
+  "universe_version": "2.0.0",
+  "generated_at_utc": "2026-05-30T18:24:50.019257+00:00",
+  "production": [
+    {
+      "model_id": "candidate_scorer_v4.5",
+      "family": "candidate_scorer",
+      "version": "4.5",
+      "status": "production",
+      "created_at": "2026-05-30 16:59:24",
+      "promoted_at": null,
+      "retired_at": null,
+      "code_commit_sha": null,
+      "description": "Phase-4 multi-pillar scorer: BQ(25%) + Val(10%) + Growth(15%) + Tech(20%) + Theme(10%) + Macro(10%) + Risk(10%). Model-type-aware (operating/bank/reit/biotech/etf).",
+      "shadow_period_start": null,
+      "shadow_period_end": null,
+      "shadow_signal_count": null,
+      "shadow_hit_rate": null,
+      "shadow_ev": null,
+      "shadow_vs_production_correlation": null,
+      "graduation_decision": null,
+      "config": {
+        "weights": {
+          "bq": 0.25,
+          "val": 0.1,
+          "growth": 0.15,
+          "tech": 0.2,
+          "sec_theme": 0.1,
+          "macro": 0.1,
+          "risk": 0.1
+        },
+        "r2_low_threshold": 0.3,
+        "dq_floor": 50,
+        "regime_boost": 5.0
+      }
+    },
+    {
+      "model_id": "regime_classifier_v1.3",
+      "family": "regime_classifier",
+      "version": "1.3",
+      "status": "production",
+      "created_at": "2026-05-30 16:59:24",
+      "promoted_at": null,
+      "retired_at": null,
+      "code_commit_sha": null,
+      "description": "8-state market regime classifier. States: BROAD_RISK_ON, NARROW_THEME_LEADERSHIP, ROTATION_MARKET, TECH_LEADERSHIP, DEFENSIVE, MACRO_RISK_OFF, VOLATILE_CHOP, RATE_SENSITIVE. Whipsaw prevention: requires 2-day persistence before state change.",
+      "shadow_period_start": null,
+      "shadow_period_end": null,
+      "shadow_signal_count": null,
+      "shadow_hit_rate": null,
+      "shadow_ev": null,
+      "shadow_vs_production_correlation": null,
+      "graduation_decision": null,
+      "config": {
+        "states": 8,
+        "persistence_days": 2,
+        "confidence_threshold": 0.55
+      }
+    },
+    {
+      "model_id": "risk_governor_v1.0",
+      "family": "risk_governor",
+      "version": "1.0",
+      "status": "production",
+      "created_at": "2026-05-30 16:59:24",
+      "promoted_at": null,
+      "retired_at": null,
+      "code_commit_sha": null,
+      "description": "15-gate risk governor (Phase 5). Outputs APPROVED | SIZE_REDUCED | BLOCKED | REVIEW_REQUIRED.",
+      "shadow_period_start": null,
+      "shadow_period_end": null,
+      "shadow_signal_count": null,
+      "shadow_hit_rate": null,
+      "shadow_ev": null,
+      "shadow_vs_production_correlation": null,
+      "graduation_decision": null,
+      "config": {
+        "gates": 15,
+        "high_beta_cap": 0.2,
+        "sector_concentration_cap": 0.35,
+        "theme_concentration_cap": 0.3,
+        "single_position_cap": 0.08,
+        "leverage_cap": 1.3
+      }
+    },
+    {
+      "model_id": "factor_model_v1.0",
+      "family": "factor_model",
+      "version": "1.0",
+      "status": "production",
+      "created_at": "2026-05-30 16:59:24",
+      "promoted_at": null,
+      "retired_at": null,
+      "code_commit_sha": null,
+      "description": "Single-factor market beta (OLS vs SPY, 2-year lookback). SMB/HML via characteristic proxies. RMW/CMA NULL pending data accumulation. R²<0.30 triggers low_r2 warning.",
+      "shadow_period_start": null,
+      "shadow_period_end": null,
+      "shadow_signal_count": null,
+      "shadow_hit_rate": null,
+      "shadow_ev": null,
+      "shadow_vs_production_correlation": null,
+      "graduation_decision": null,
+      "config": {
+        "lookback_days": 504,
+        "min_obs": 60,
+        "r2_low_threshold": 0.3,
+        "smb_via": "mcap_bucket",
+        "hml_via": "sector_lookup"
+      }
+    }
+  ],
+  "shadow": [],
+  "experimental": [],
+  "deprecated": [],
+  "total": 4
+}

@@ -1,0 +1,19 @@
+{
+  "scenario_id": "gold_017_metrics_core",
+  "description": "Hand-computed backtest metric pins: max_drawdown, total_return, sharpe(rf=0), profit_factor, payoff_ratio",
+  "function": "backtest.metrics",
+  "cases": {
+    "max_drawdown": {"equity": [100, 110, 90, 95, 120, 60], "expected": -0.5},
+    "total_return": {"equity": [100, 110, 90, 95, 120, 60], "expected": -0.4},
+    "sharpe": {"returns": [0.01, 0.02, -0.01, 0.03, 0.0], "ppy": 252, "rf": 0.0, "expected": 10.0397},
+    "profit_factor": {"returns": [0.01, 0.02, -0.01, 0.03, 0.0], "expected": 6.0},
+    "payoff_ratio": {"returns": [0.01, 0.02, -0.01, 0.03, 0.0], "expected": 2.0},
+    "hit_rate": {"returns": [0.01, 0.02, -0.01, 0.03, 0.0], "expected": 0.6},
+    "expected_value": {"returns": [0.01, 0.02, -0.01, 0.03, 0.0], "expected": 0.008}
+  },
+  "tolerance": {
+    "sharpe": 0.001,
+    "expected_value": 1e-6,
+    "default": 1e-6
+  }
+}

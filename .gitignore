@@ -1,0 +1,71 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+*.swp
+
+# Secrets — config split
+config.local.js
+config.local.*
+*.local.json
+# Private API-key env files. The real one lives in ~/.wealth-dashboard/secrets.env
+# (outside the repo); these patterns are belt-and-braces so a repo-local copy
+# can never be committed.
+secrets.env
+*.env
+.env
+
+# ============================================================================
+# PERSONAL DATA — NEVER COMMITTED
+# Cloud/Local separation: personal portfolio data lives only locally.
+# These patterns block accidental commits of personal/portfolio/account data.
+# ============================================================================
+
+# Personal SQLite DB (Local Mode)
+data/db/personal.sqlite
+data/db/personal.sqlite-journal
+data/db/personal.sqlite-shm
+data/db/personal.sqlite-wal
+
+# User-specific data files
+data/personal/
+data/user_actions*
+data/portfolio_snapshots*
+data/account_buckets*
+data/tax_lots*
+
+# Local Wealth Dashboard data directory (personal DB + local_token)
+~/.wealth-dashboard/
+.wealth-dashboard/
+
+# Local token file (never commit — regenerated on server start)
+local_token
+**/local_token
+
+# Logs (may contain personal context)
+logs/
+*.jsonl
+
+# Local server runtime
+server.log
+*.pid
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Snapshot scratch
+data/snapshots/_scratch/
+*.tmp
+
+# Cloud DB transient WAL/SHM (the .sqlite itself is committed; these are
+# auto-managed by SQLite and checkpointed before commit)
+*.sqlite-shm
+*.sqlite-wal
+
+# Local agent state (Claude plans/memory, never committed)
+.claude/

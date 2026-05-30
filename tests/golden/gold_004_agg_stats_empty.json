@@ -1,0 +1,12 @@
+{
+  "scenario_id": "gold_004_agg_stats_empty",
+  "description": "Empty rows list → {n: 0} only",
+  "function": "views_builder._agg_stats",
+  "frozen_inputs": {
+    "rows": []
+  },
+  "expected_outputs": {
+    "n": 0
+  },
+  "tolerance": {}
+}

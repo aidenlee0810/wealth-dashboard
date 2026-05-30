@@ -1,0 +1,1350 @@
+{
+  "snapshot_date": "2026-05-29",
+  "market_date": "2026-05-29",
+  "executed_at_utc": "2026-05-30T18:18:34.042680+00:00",
+  "feature_version": "4.5.0",
+  "universe_version": "2.0.0",
+  "generated_at_utc": "2026-05-30T18:24:50.019257+00:00",
+  "count": 34,
+  "candidates": [
+    {
+      "ticker": "TSM",
+      "type": "Tactical",
+      "score": 83.3,
+      "sector": "Information Technology",
+      "dq": 92.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "ai_infrastructure",
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "theme:ai_infrastructure",
+        "theme:semiconductors",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 57.1,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (57%)",
+      "reasons": [
+        "기술 점수 98/100 · 상태 UPTREND",
+        "테마 소속: ai_infrastructure, semiconductors",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 98/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 95.9,
+        "valuation": 17.3,
+        "growth": 89.6,
+        "technical": 98.4,
+        "sector_theme": 100.0,
+        "macro": 78.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "NVDA",
+      "type": "Tactical",
+      "score": 83.1,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "ai_infrastructure",
+        "semiconductors",
+        "robotics_automation"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLK",
+        "theme:ai_infrastructure",
+        "theme:semiconductors",
+        "theme:robotics_automation",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 92/100 · 상태 UPTREND",
+        "테마 소속: ai_infrastructure, semiconductors, robotics_automation",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 92/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 98.3,
+        "valuation": 11.6,
+        "growth": 100.0,
+        "technical": 92.1,
+        "sector_theme": 96.1,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "MU",
+      "type": "Tactical",
+      "score": 81.3,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:semiconductors",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: semiconductors",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 88.1,
+        "valuation": 0.0,
+        "growth": 100.0,
+        "technical": 100.0,
+        "sector_theme": 100.0,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "LRCX",
+      "type": "Tactical",
+      "score": 79.4,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:semiconductors",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: semiconductors",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 91.1,
+        "valuation": 0.0,
+        "growth": 78.8,
+        "technical": 100.0,
+        "sector_theme": 100.0,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ADI",
+      "type": "Tactical",
+      "score": 77.6,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:semiconductors"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 99/100 · 상태 UPTREND",
+        "테마 소속: semiconductors",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 99/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 74.9,
+        "valuation": 5.4,
+        "growth": 87.3,
+        "technical": 99.4,
+        "sector_theme": 100.0,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "FTNT",
+      "type": "Tactical",
+      "score": 76.8,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "cybersecurity"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:cybersecurity",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: cybersecurity",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 95.3,
+        "valuation": 0.6,
+        "growth": 50.4,
+        "technical": 100.0,
+        "sector_theme": 99.2,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "AAPL",
+      "type": "Tactical",
+      "score": 76.1,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLK"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 96/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 96/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 90.7,
+        "valuation": 18.8,
+        "growth": 42.6,
+        "technical": 95.7,
+        "sector_theme": 100.0,
+        "macro": 60.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "AVGO",
+      "type": "Tactical",
+      "score": 76.0,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "ai_infrastructure",
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLK",
+        "theme:ai_infrastructure",
+        "theme:semiconductors",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 BREAKOUT",
+        "테마 소속: ai_infrastructure, semiconductors",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 BREAKOUT",
+      "pillars": {
+        "bq": 77.7,
+        "valuation": 0.0,
+        "growth": 75.3,
+        "technical": 100.0,
+        "sector_theme": 100.0,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "GOOGL",
+      "type": "Tactical",
+      "score": 75.1,
+      "sector": "Communication Services",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "ai_infrastructure",
+        "media_streaming"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLC",
+        "theme:ai_infrastructure",
+        "theme:media_streaming"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 BASE",
+        "테마 소속: ai_infrastructure, media_streaming",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 BASE",
+      "pillars": {
+        "bq": 84.9,
+        "valuation": 20.8,
+        "growth": 57.4,
+        "technical": 100.0,
+        "sector_theme": 84.9,
+        "macro": 68.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ASML",
+      "type": "Tactical",
+      "score": 74.6,
+      "sector": "Industrial Machinery",
+      "dq": 92.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "nasdaq100",
+        "theme:semiconductors",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 57.1,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (57%)",
+      "reasons": [
+        "기술 점수 98/100 · 상태 UPTREND",
+        "테마 소속: semiconductors",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 98/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 92.2,
+        "valuation": 0.0,
+        "growth": 51.4,
+        "technical": 97.6,
+        "sector_theme": 100.0,
+        "macro": 68.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "AMD",
+      "type": "Tactical",
+      "score": 74.4,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "ai_infrastructure",
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLK",
+        "theme:ai_infrastructure",
+        "theme:semiconductors",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: ai_infrastructure, semiconductors",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 57.0,
+        "valuation": 0.0,
+        "growth": 100.0,
+        "technical": 100.0,
+        "sector_theme": 100.0,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "XLK",
+      "type": "Tactical",
+      "score": 73.9,
+      "sector": null,
+      "dq": 80.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": null,
+        "technical": 100.0,
+        "sector_theme": 50.0,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "QQQ",
+      "type": "Tactical",
+      "score": 73.9,
+      "sector": null,
+      "dq": 80.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": null,
+        "technical": 100.0,
+        "sector_theme": 50.0,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "SPY",
+      "type": "Tactical",
+      "score": 72.5,
+      "sector": null,
+      "dq": 80.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 96/100 · 상태 UPTREND",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 96/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": null,
+        "technical": 96.1,
+        "sector_theme": 50.0,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "PANW",
+      "type": "Tactical",
+      "score": 72.5,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "cybersecurity"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:cybersecurity",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: cybersecurity",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 76.3,
+        "valuation": 0.0,
+        "growth": 49.6,
+        "technical": 100.0,
+        "sector_theme": 99.2,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "CSCO",
+      "type": "Tactical",
+      "score": 72.0,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLK"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 77.0,
+        "valuation": 14.0,
+        "growth": 33.3,
+        "technical": 100.0,
+        "sector_theme": 100.0,
+        "macro": 60.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "MRVL",
+      "type": "Tactical",
+      "score": 71.6,
+      "sector": "Semiconductors",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "nasdaq100",
+        "theme:semiconductors"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: semiconductors",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 46.3,
+        "valuation": 1.8,
+        "growth": 97.7,
+        "technical": 100.0,
+        "sector_theme": 100.0,
+        "macro": 68.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ARM",
+      "type": "Tactical",
+      "score": 71.6,
+      "sector": "Semiconductors",
+      "dq": 92.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "nasdaq100",
+        "theme:semiconductors"
+      ],
+      "bq_coverage_ratio": 57.1,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (57%)",
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: semiconductors",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 66.7,
+        "valuation": 0.0,
+        "growth": 69.5,
+        "technical": 100.0,
+        "sector_theme": 100.0,
+        "macro": 68.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "CF",
+      "type": "Tactical",
+      "score": 70.6,
+      "sector": "Materials",
+      "dq": 100.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 57/100 · 상태 PULLBACK",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 57/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 89.9,
+        "valuation": 96.5,
+        "growth": 69.1,
+        "technical": 56.6,
+        "sector_theme": 36.6,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "XLY",
+      "type": "Tactical",
+      "score": 70.5,
+      "sector": null,
+      "dq": 80.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 90/100 · 상태 UPTREND",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 90/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": null,
+        "technical": 90.2,
+        "sector_theme": 50.0,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "XLRE",
+      "type": "Tactical",
+      "score": 70.0,
+      "sector": null,
+      "dq": 80.0,
+      "target_weight": 0.04,
+      "risk_adjusted_weight": 0.04,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 89/100 · 상태 BASE",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 89/100 · 상태 BASE",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": null,
+        "technical": 88.8,
+        "sector_theme": 50.0,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "XLI",
+      "type": "Tactical",
+      "score": 69.3,
+      "sector": null,
+      "dq": 80.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [],
+      "bq_coverage_ratio": 0.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (0%)",
+      "reasons": [
+        "기술 점수 87/100 · 상태 BASE",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 87/100 · 상태 BASE",
+      "pillars": {
+        "bq": null,
+        "valuation": null,
+        "growth": null,
+        "technical": 86.8,
+        "sector_theme": 50.0,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "AMZN",
+      "type": "Tactical",
+      "score": 67.2,
+      "sector": "Consumer Discretionary",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "ai_infrastructure",
+        "ecommerce_internet"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLY",
+        "theme:ai_infrastructure",
+        "theme:ecommerce_internet"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: ai_infrastructure, ecommerce_internet",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 45.3,
+        "valuation": 32.6,
+        "growth": 52.3,
+        "technical": 100.0,
+        "sector_theme": 83.1,
+        "macro": 68.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ADM",
+      "type": "Tactical",
+      "score": 66.9,
+      "sector": "Consumer Staples",
+      "dq": 92.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500"
+      ],
+      "bq_coverage_ratio": 42.9,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (43%)",
+      "reasons": [
+        "기술 점수 99/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 99/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 50.4,
+        "valuation": 77.2,
+        "growth": 100.0,
+        "technical": 98.6,
+        "sector_theme": 23.9,
+        "macro": 50.0,
+        "risk": 90.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "NET",
+      "type": "Tactical",
+      "score": 65.9,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "cybersecurity",
+        "cloud_software"
+      ],
+      "source_buckets": [
+        "theme:cybersecurity",
+        "theme:cloud_software",
+        "core_watchlist"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: cybersecurity, cloud_software",
+        "Core watchlist 멤버",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 23.2,
+        "valuation": 0.0,
+        "growth": 92.0,
+        "technical": 100.0,
+        "sector_theme": 99.2,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "MO",
+      "type": "Tactical",
+      "score": 65.4,
+      "sector": "Consumer Staples",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLP"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 87/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 87/100 · 상태 BASE",
+      "pillars": {
+        "bq": 90.4,
+        "valuation": 90.1,
+        "growth": 8.6,
+        "technical": 86.9,
+        "sector_theme": 23.9,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "ROK",
+      "type": "Tactical",
+      "score": 64.2,
+      "sector": "Industrials",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "robotics_automation"
+      ],
+      "source_buckets": [
+        "sp500",
+        "theme:robotics_automation"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 99/100 · 상태 UPTREND",
+        "테마 소속: robotics_automation",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 99/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 79.8,
+        "valuation": 13.1,
+        "growth": 39.3,
+        "technical": 99.1,
+        "sector_theme": 58.3,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "PM",
+      "type": "Tactical",
+      "score": 64.1,
+      "sector": "Consumer Staples",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLP"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 84/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 84/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 98.3,
+        "valuation": 55.3,
+        "growth": 31.9,
+        "technical": 84.0,
+        "sector_theme": 23.9,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "MPC",
+      "type": "Tactical",
+      "score": 64.1,
+      "sector": "Energy",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLE"
+      ],
+      "bq_coverage_ratio": 85.7,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 94/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 94/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 65.4,
+        "valuation": 92.0,
+        "growth": 7.3,
+        "technical": 93.8,
+        "sector_theme": 35.8,
+        "macro": 60.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "MS",
+      "type": "Tactical",
+      "score": 63.8,
+      "sector": "Financials",
+      "dq": 92.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLF"
+      ],
+      "bq_coverage_ratio": 40.0,
+      "coverage_warning": "펀더멘털 커버리지 낮음 (40%)",
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 87.1,
+        "valuation": 0.0,
+        "growth": 50.0,
+        "technical": 100.0,
+        "sector_theme": 52.1,
+        "macro": 60.0,
+        "risk": 90.0
+      },
+      "model_type": "bank"
+    },
+    {
+      "ticker": "EOG",
+      "type": "Tactical",
+      "score": 63.7,
+      "sector": "Energy",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "sector:XLE"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 61/100 · 상태 PULLBACK",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 61/100 · 상태 PULLBACK",
+      "pillars": {
+        "bq": 84.2,
+        "valuation": 92.3,
+        "growth": 19.0,
+        "technical": 60.6,
+        "sector_theme": 35.8,
+        "macro": 60.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "GD",
+      "type": "Tactical",
+      "score": 62.8,
+      "sector": "Industrials",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "defense_aerospace"
+      ],
+      "source_buckets": [
+        "sp500",
+        "theme:defense_aerospace"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 83/100 · 상태 UPTREND",
+        "테마 소속: defense_aerospace",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 83/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 52.4,
+        "valuation": 82.4,
+        "growth": 36.0,
+        "technical": 82.7,
+        "sector_theme": 48.7,
+        "macro": 40.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "KLAC",
+      "type": "Tactical",
+      "score": 62.7,
+      "sector": "Information Technology",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [
+        "semiconductors"
+      ],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "theme:semiconductors"
+      ],
+      "bq_coverage_ratio": 100.0,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 UPTREND",
+        "테마 소속: semiconductors",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 UPTREND",
+      "pillars": {
+        "bq": 34.2,
+        "valuation": 0.0,
+        "growth": 44.3,
+        "technical": 100.0,
+        "sector_theme": 100.0,
+        "macro": 78.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    },
+    {
+      "ticker": "GOOG",
+      "type": "Tactical",
+      "score": 62.1,
+      "sector": "Communication Services",
+      "dq": 100.0,
+      "target_weight": 0.025,
+      "risk_adjusted_weight": 0.025,
+      "risk_size_multiplier": 1.0,
+      "risk_reason": "리스크 게이트 통과",
+      "risk_manual_checks": [
+        "실적발표 일정 확인 불가(데이터 없음)"
+      ],
+      "themes": [],
+      "source_buckets": [
+        "sp500",
+        "nasdaq100",
+        "sector:XLC"
+      ],
+      "bq_coverage_ratio": 71.4,
+      "coverage_warning": null,
+      "reasons": [
+        "기술 점수 100/100 · 상태 BASE",
+        "universe 2일 연속 활성",
+        "레짐 ROTATION_MARKET"
+      ],
+      "discovery_reason": "기술 점수 100/100 · 상태 BASE",
+      "pillars": {
+        "bq": 84.9,
+        "valuation": 21.3,
+        "growth": 57.4,
+        "technical": 99.8,
+        "sector_theme": 24.2,
+        "macro": 50.0,
+        "risk": 100.0
+      },
+      "model_type": "operating_company"
+    }
+  ]
+}

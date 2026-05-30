@@ -1,0 +1,26 @@
+{
+  "scenario_id": "gold_007_risk_governor_approved",
+  "description": "Clean NVDA with good DQ, liquid, uptrend → APPROVED, size = base_weight",
+  "function": "risk_governor.evaluate",
+  "frozen_inputs": {
+    "ticker": "NVDA",
+    "composite": 80,
+    "dq_score": 95,
+    "state": "UPTREND",
+    "price_vs_sma200": 0.15,
+    "sma200_slope": 1.0,
+    "price": 140.0,
+    "adv_dollar": 5000000000,
+    "has_prices": true,
+    "market_regime": "BROAD_RISK_ON",
+    "base_weight": 0.04,
+    "is_new_entry": true
+  },
+  "expected_outputs": {
+    "risk_status": "APPROVED",
+    "risk_flags": [],
+    "suggested_size_before_risk": 0.04,
+    "suggested_size_after_risk": 0.04,
+    "size_multiplier": 1.0
+  }
+}

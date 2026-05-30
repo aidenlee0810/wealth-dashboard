@@ -1,0 +1,120 @@
+{
+  "snapshot_date": "2026-05-29",
+  "market_date": "2026-05-29",
+  "executed_at_utc": "2026-05-30T18:18:34.042680+00:00",
+  "feature_version": "4.5.0",
+  "universe_version": "2.0.0",
+  "generated_at_utc": "2026-05-30T18:24:50.019257+00:00",
+  "total_graded_outcomes": 0,
+  "overall_by_horizon": {},
+  "governor_ledger": {},
+  "by_source": {},
+  "by_candidate_type": {},
+  "by_risk_status": {},
+  "by_dq_tier": {},
+  "by_regime": {},
+  "core_questions": [
+    {
+      "id": 1,
+      "question": "Core Candidate가 60D/120D에서 양의 EV를 냈는가?",
+      "answer": null,
+      "evidence": {
+        "core_60d": {},
+        "core_120d": {}
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 2,
+      "question": "Tactical Candidate가 단기(5D/20D)에서 장기(60D)보다 성과가 좋은가?",
+      "answer": null,
+      "evidence": {
+        "tactical_5d": {},
+        "tactical_20d": {},
+        "tactical_60d": {}
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 3,
+      "question": "DQ ≥85 신호가 DQ <70보다 20D EV가 높은가?",
+      "answer": null,
+      "evidence": {
+        "dq_85plus_20d": {},
+        "dq_50_69_20d": {},
+        "dq_below50_20d": {}
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 4,
+      "question": "Risk Governor가 순효익을 냈는가? (회피 손실 > 놓친 상승, System Pure vs Risk Policy)",
+      "answer": null,
+      "evidence": {
+        "governor_ledger_20d": {},
+        "approved_20d": {},
+        "blocked_20d": {},
+        "size_reduced_20d": {}
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 5,
+      "question": "시스템 전체 신호가 20D에서 양의 EV를 냈는가?",
+      "answer": null,
+      "evidence": {
+        "overall_20d": {}
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 6,
+      "question": "NARROW_THEME_LEADERSHIP 레짐에서 신호가 BROAD_RISK_ON보다 성과가 좋은가?",
+      "answer": null,
+      "evidence": {
+        "ntl_20d": {},
+        "broad_20d": {}
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 7,
+      "question": "20D 신호의 Profit Factor가 1.0 초과인가? (수익/손실 > 1)",
+      "answer": null,
+      "evidence": {
+        "profit_factor_20d": null,
+        "n": 0
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 8,
+      "question": "Watchlist Candidate가 60D에서 양의 EV를 냈는가?",
+      "answer": null,
+      "evidence": {
+        "watchlist_60d": {}
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 9,
+      "question": "60D 보유 시 평균 MFE가 MAE보다 큰가? (리스크 대비 보상이 양호한가?)",
+      "answer": null,
+      "evidence": {
+        "avg_mae_60d": null,
+        "avg_mfe_60d": null,
+        "avg_mdd_60d": null
+      },
+      "sufficient_data": false
+    },
+    {
+      "id": 10,
+      "question": "REVIEW_REQUIRED 신호 성과: 검토 후 진입이 효과적이었는가?",
+      "answer": null,
+      "evidence": {
+        "review_required_20d": {}
+      },
+      "sufficient_data": false
+    }
+  ]
+}

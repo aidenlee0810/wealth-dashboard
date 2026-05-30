@@ -1,0 +1,91 @@
+{
+  "snapshot_date": "2026-05-29",
+  "market_date": "2026-05-29",
+  "executed_at_utc": "2026-05-30T18:18:34.042680+00:00",
+  "feature_version": "4.5.0",
+  "universe_version": "2.0.0",
+  "generated_at_utc": "2026-05-30T18:24:50.019257+00:00",
+  "result_status": "success",
+  "snapshot_age_hours": 0.1,
+  "universe": {
+    "total_active": 555,
+    "new_today": 0,
+    "dropped_today": 0,
+    "stage1_scanned": 232,
+    "stage2_scanned": 120,
+    "stage2_target": 120
+  },
+  "candidates": {
+    "core": 0,
+    "watchlist": 50,
+    "tactical": 34,
+    "reject": 36
+  },
+  "api": {
+    "calls_by_provider": {
+      "alpaca": 233,
+      "yahoo": 3,
+      "fred": 13,
+      "finnhub": 149,
+      "sec": 84
+    },
+    "rate_limit_hits": 24,
+    "skipped_due_to_budget": 0,
+    "retry_count": 0,
+    "failed_count": 1
+  },
+  "dq": {
+    "below_50_count": 0,
+    "below_70_count": 0
+  },
+  "data_realism": {
+    "price_sources": {
+      "alpaca": 76880
+    },
+    "all_prices_synthetic": false,
+    "feature_versions": [
+      {
+        "feature_version": "4.5.0",
+        "n": 232,
+        "bq_scored": 118,
+        "valuation_scored": 127,
+        "growth_scored": 133
+      }
+    ],
+    "price_quality": {
+      "real": 232,
+      "mixed": 0,
+      "synthetic": 0,
+      "none": 0
+    },
+    "valuation_populated_count": 127,
+    "price_provider_failures": {
+      "alpaca": {
+        "count": 1,
+        "reasons": {
+          "no_data": 1
+        }
+      },
+      "yahoo": {
+        "count": 1,
+        "reasons": {
+          "yahoo HTTP 429: Too Many Requests": 1
+        }
+      }
+    },
+    "corporate_actions": {
+      "total_count": 387,
+      "dividend_count": 384,
+      "split_count": 3,
+      "latest_ex_date": "2026-05-18",
+      "tickers_with_ttm_dividend": 93
+    }
+  },
+  "system": {
+    "elapsed_seconds": 376.0,
+    "consecutive_success_count": 2,
+    "db_size_kb": 28228,
+    "repo_size_kb": 0,
+    "archive_policy": "phase2_views_primary"
+  }
+}

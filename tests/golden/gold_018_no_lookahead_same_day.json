@@ -1,0 +1,15 @@
+{
+  "scenario_id": "gold_018_no_lookahead_same_day",
+  "description": "assert_no_lookahead is date-granular: a same-day post-close timestamp ('D 20:00Z') is usable for a decision dated D; a next-day usable_at is a violation",
+  "function": "backtest.bias.assert_no_lookahead",
+  "decision_date": "2026-05-15",
+  "ok_rows": [
+    {"ticker": "A", "usable_at": "2026-05-15T20:00:00Z"},
+    {"ticker": "B", "usable_at": null},
+    {"ticker": "C", "usable_at": "2026-05-10"}
+  ],
+  "ok_expected_count": 3,
+  "violation_rows": [
+    {"ticker": "X", "usable_at": "2026-05-16T00:00:00Z"}
+  ]
+}

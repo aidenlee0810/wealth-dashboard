@@ -1,0 +1,27 @@
+{
+  "scenario_id": "gold_008_risk_governor_compound",
+  "description": "DQ_LOW (0.4x) + LEVERAGE_DECAY (0.5x) compound → SIZE_REDUCED, multiplier=0.2, size=0.04*0.2=0.008",
+  "function": "risk_governor.evaluate",
+  "frozen_inputs": {
+    "ticker": "TQQQ",
+    "composite": 72,
+    "dq_score": 60,
+    "model_type": "leveraged_etf",
+    "state": "UPTREND",
+    "price_vs_sma200": 0.08,
+    "sma200_slope": 0.5,
+    "price": 55.0,
+    "adv_dollar": 3000000000,
+    "has_prices": true,
+    "market_regime": "BROAD_RISK_ON",
+    "base_weight": 0.04,
+    "is_new_entry": true
+  },
+  "expected_outputs": {
+    "risk_status": "SIZE_REDUCED",
+    "suggested_size_before_risk": 0.04,
+    "suggested_size_after_risk": 0.008,
+    "size_multiplier": 0.2
+  },
+  "expected_flags_include": ["DQ_LOW", "LEVERAGE_DECAY"]
+}

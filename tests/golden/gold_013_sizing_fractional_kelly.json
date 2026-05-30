@@ -1,0 +1,32 @@
+{
+  "scenario_id": "gold_013_sizing_fractional_kelly",
+  "description": "fractional_kelly: edge/variance * 0.25 fraction, capped at MAX_POSITION_WEIGHT=0.08",
+  "function": "sizing.fractional_kelly",
+  "test_cases": [
+    {
+      "edge": 0.08, "variance": 0.25,
+      "expected": 0.08,
+      "note": "full Kelly=0.32, quarter=0.08, cap=0.08 → 0.08"
+    },
+    {
+      "edge": 0.04, "variance": 0.25,
+      "expected": 0.04,
+      "note": "full Kelly=0.16, quarter=0.04, cap=0.08 → 0.04"
+    },
+    {
+      "edge": -0.05, "variance": 0.25,
+      "expected": 0.0,
+      "note": "negative edge → 0"
+    },
+    {
+      "edge": 0.0, "variance": 0.25,
+      "expected": 0.0,
+      "note": "zero edge → 0"
+    },
+    {
+      "edge": 0.50, "variance": 0.25,
+      "expected": 0.08,
+      "note": "very high edge → capped at 0.08"
+    }
+  ]
+}
